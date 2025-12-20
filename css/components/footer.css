@@ -1,0 +1,67 @@
+/* 01 */ /* FOOTER - ServicesBI */
+/* 02 */
+ /* 03 */ .site-footer {
+ /* 04 */     background-color: #1f3d2b;
+ /* 05 */     color: #ffffff;
+ /* 06 */     padding-top: 48px;
+ /* 07 */ }
+ /* 08 */
+ /* 09 */ .footer-container {
+ /* 10 */     max-width: 1200px;
+ /* 11 */     margin: 0 auto;
+ /* 12 */     padding: 0 24px;
+ /* 13 */     display: grid;
+ /* 14 */     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ /* 15 */     gap: 32px;
+ /* 16 */ }
+ /* 17 */
+ /* 18 */ .footer-column img {
+ /* 19 */     height: 40px;
+ /* 20 */     margin-bottom: 16px;
+ /* 21 */ }
+ /* 22 */
+ /* 23 */ .footer-column h4 {
+ /* 24 */     font-family: "Segoe UI", sans-serif;
+ /* 25 */     font-size: 16px;
+ /* 26 */     margin-bottom: 12px;
+ /* 27 */ }
+ /* 28 */
+ /* 29 */ .footer-column p,
+ /* 30 */ .footer-column a {
+ /* 31 */     font-family: "Segoe UI", sans-serif;
+ /* 32 */     font-size: 14px;
+ /* 33 */     color: #d0d0d0;
+ /* 34 */     text-decoration: none;
+ /* 35 */ }
+ /* 36 */
+ /* 37 */ .footer-column ul {
+ /* 38 */     list-style: none;
+ /* 39 */     padding: 0;
+ /* 40 */     margin: 0;
+ /* 41 */ }
+ /* 42 */
+ /* 43 */ .footer-column li {
+ /* 44 */     margin-bottom: 8px;
+ /* 45 */ }
+ /* 46 */
+ /* 47 */ .footer-column a:hover {
+ /* 48 */     color: #ffffff;
+ /* 49 */ }
+ /* 50 */
+ /* 51 */ .footer-social a img {
+ /* 52 */     height: 24px;
+ /* 53 */     margin-right: 12px;
+ /* 54 */ }
+ /* 55 */
+ /* 56 */ .footer-bottom {
+ /* 57 */     margin-top: 32px;
+ /* 58 */     padding: 16px 0;
+ /* 59 */     background-color: #182f22;
+ /* 60 */     text-align: center;
+ /* 61 */ }
+ /* 62 */
+ /* 63 */ .footer-bottom p {
+ /* 64 */     margin: 0;
+ /* 65 */     font-size: 13px;
+ /* 66 */     color: #bfbfbf;
+ /* 67 */ }

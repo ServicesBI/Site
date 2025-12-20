@@ -1,0 +1,136 @@
+<!-- ============================================================================= -->
+<!-- ARQUIVO: /contato.html                                                       -->
+<!-- PROJETO: ServicesBI                                                          -->
+<!-- STATUS: FORMULÁRIO DE CONTATO (NETLIFY FORMS) — SEM HERO                      -->
+<!-- STATUS: FORMULÁRIO ORGANIZADO EM GRID (ESTILO TABLE / VSCODE)                -->
+<!-- STATUS: HEADER PADRONIZADO (MENU CENTRAL + AVATAR)                           -->
+<!-- STATUS: FOOTER PADRONIZADO + COPYRIGHT EM FAIXA AMARELA                      -->
+<!-- STATUS: CORREÇÃO DA TAG <FORM> (ATRIBUTOS SENDO RENDERIZADOS COMO TEXTO)     -->
+<!-- STATUS: HERO PADRONIZADO COM BANNER (PADRÃO GLOBAL DO SITE)                  -->
+<!-- STATUS: FOOTER COM ÍCONES E NAVEGAÇÃO CLICÁVEIS                               -->
+<!-- ============================================================================= -->
+
+<!-- 001 --> <!DOCTYPE html>
+<!-- 002 --> <html lang="pt-BR">
+<!-- 003 --> <head>
+<!-- 004 -->     <meta charset="UTF-8">
+<!-- 005 -->     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 006 -->     <title>Contato | ServicesBI</title>
+<!-- 007 -->     <link rel="stylesheet" href="css/style.css">
+<!-- 008 -->     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- 009 --> </head>
+<!-- 010 --> <body>
+
+<!-- ================= HEADER ================= -->
+
+<!-- 011 --> <header class="site-header">
+<!-- 012 -->     <div class="container header-container">
+<!-- 013 -->         <nav class="nav">
+<!-- 014 -->             <a href="index.html">Home</a>
+<!-- 015 -->             <a href="python.html">Python</a>
+<!-- 016 -->             <a href="powerbi.html">PowerBI</a>
+<!-- 017 -->             <a href="automacoes-ia.html">Automações IA</a>
+<!-- 018 -->             <a href="excel.html">Excel</a>
+<!-- 019 -->             <a href="curriculo.html">Currículo</a>
+<!-- 020 -->             <a class="active" href="contato.html">Contato</a>
+<!-- 021 -->         </nav>
+<!-- 022 -->         <div class="header-avatar">
+<!-- 023 -->             <a href="index.html">
+<!-- 024 -->                 <img src="img/avatar.png" alt="Avatar ServicesBI">
+<!-- 025 -->             </a>
+<!-- 026 -->         </div>
+<!-- 027 -->     </div>
+<!-- 028 --> </header>
+
+<!-- ================= HERO ================= -->
+
+<!-- 029 --> <section class="hero hero-contato">
+<!-- 030 -->     <div class="container hero-container">
+<!-- 031 -->         <p>
+<!-- 032 -->             Entre em contato para falar sobre projetos, oportunidades
+<!-- 033 -->             ou parcerias profissionais em dados, BI e automação.
+<!-- 034 -->         </p>
+<!-- 035 -->     </div>
+<!-- 036 --> </section>
+
+<!-- ================= CONTATO ================= -->
+
+<!-- 037 --> <main class="contato-page">
+<!-- 038 -->     <div class="container">
+<!-- 039 -->         <h1>Entre em contato</h1>
+<!-- 040 -->         <p>
+<!-- 041 -->             Utilize o formulário abaixo para falar sobre projetos,
+<!-- 042 -->             oportunidades ou parcerias profissionais.
+<!-- 043 -->         </p>
+
+<!-- 044 -->         <form class="contato-form" name="contato" method="POST" data-netlify="true">
+<!-- 045 -->             <input type="hidden" name="form-name" value="contato">
+
+<!-- 046 -->             <div class="contato-grid">
+
+<!-- 047 -->                 <div class="form-group">
+<!-- 048 -->                     <label for="nome">Nome</label>
+<!-- 049 -->                     <input type="text" id="nome" name="nome" required>
+<!-- 050 -->                 </div>
+
+<!-- 051 -->                 <div class="form-group">
+<!-- 052 -->                     <label for="email">E-mail</label>
+<!-- 053 -->                     <input type="email" id="email" name="email" required>
+<!-- 054 -->                 </div>
+
+<!-- 055 -->                 <div class="form-group full">
+<!-- 056 -->                     <label for="mensagem">Mensagem</label>
+<!-- 057 -->                     <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+<!-- 058 -->                 </div>
+
+<!-- 059 -->             </div>
+
+<!-- 060 -->             <button type="submit" class="btn-project">
+<!-- 061 -->                 Enviar mensagem
+<!-- 062 -->             </button>
+
+<!-- 063 -->         </form>
+<!-- 064 -->     </div>
+<!-- 065 --> </main>
+
+<!-- ================= FOOTER ================= -->
+
+<!-- 066 --> <footer class="site-footer">
+<!-- 067 -->     <div class="container footer-grid">
+<!-- 068 -->         <div></div>
+
+<!-- 069 -->         <div class="footer-center">
+<!-- 070 -->             <h4>Navegação</h4>
+<!-- 071 -->             <p class="footer-links">
+<!-- 072 -->                 <a href="index.html">Home</a> |
+<!-- 073 -->                 <a href="python.html">Python</a> |
+<!-- 074 -->                 <a href="powerbi.html">PowerBI</a> |
+<!-- 075 -->                 <a href="excel.html">Excel</a> |
+<!-- 076 -->                 <a href="curriculo.html">Currículo</a> |
+<!-- 077 -->                 <a href="contato.html">Contato</a>
+<!-- 078 -->             </p>
+<!-- 079 -->         </div>
+
+<!-- 080 -->         <div class="footer-contact">
+<!-- 081 -->             <p>
+<!-- 082 -->                 <a href="https://www.linkedin.com/in/jrleles-analista-de-dados/" target="_blank">
+<!-- 083 -->                     <i class="fa-brands fa-linkedin"></i> LinkedIn
+<!-- 084 -->                 </a>
+<!-- 085 -->             </p>
+<!-- 086 -->             <p>
+<!-- 087 -->                 <a href="https://github.com/ServicesBI" target="_blank">
+<!-- 088 -->                     <i class="fa-brands fa-github"></i> GitHub
+<!-- 089 -->                 </a>
+<!-- 090 -->             </p>
+<!-- 091 -->             <p><i class="fa-solid fa-phone"></i> +55 61 99302-9988</p>
+<!-- 092 -->             <p><i class="fa-solid fa-envelope"></i> jrleles@servicesbi.com.br</p>
+<!-- 093 -->         </div>
+<!-- 094 -->     </div>
+
+<!-- 095 -->     <div class="footer-copy-bar">
+<!-- 096 -->         © 2025 ServicesBI. Todos os direitos reservados.
+<!-- 097 -->     </div>
+<!-- 098 --> </footer>
+
+<!-- 099 --> </body>
+<!-- 100 --> </html>

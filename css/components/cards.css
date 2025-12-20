@@ -1,0 +1,56 @@
+/* 01 */ /* CARDS - HOME (PRINT 2) */
+/* 02 */
+ /* 03 */ .home-cards {
+ /* 04 */     grid-template-columns: repeat(4, 1fr);
+ /* 05 */ }
+ /* 06 */
+ /* 07 */ .card-home {
+ /* 08 */     background-color: #ffffff;
+ /* 09 */     border-radius: 16px;
+ /* 10 */     padding: 32px 24px;
+ /* 11 */     text-align: left;
+ /* 12 */     border: none;
+ /* 13 */     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+ /* 14 */     transition: transform 0.2s ease, box-shadow 0.2s ease;
+ /* 15 */ }
+ /* 16 */
+ /* 17 */ .card-home:hover {
+ /* 18 */     transform: translateY(-4px);
+ /* 19 */     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+ /* 20 */ }
+ /* 21 */
+ /* 22 */ .card-icon {
+ /* 23 */     width: 48px;
+ /* 24 */     height: 48px;
+ /* 25 */     margin-bottom: 20px;
+ /* 26 */ }
+ /* 27 */
+ /* 28 */ .card-icon img {
+ /* 29 */     width: 100%;
+ /* 30 */     height: auto;
+ /* 31 */ }
+ /* 32 */
+ /* 33 */ .card-home h3 {
+ /* 34 */     font-size: 18px;
+ /* 35 */     font-weight: 600;
+ /* 36 */     margin-bottom: 12px;
+ /* 37 */     color: #1f3d2b;
+ /* 38 */ }
+ /* 39 */
+ /* 40 */ .card-home p {
+ /* 41 */     font-size: 14px;
+ /* 42 */     line-height: 1.6;
+ /* 43 */     color: #555555;
+ /* 44 */ }
+ /* 45 */
+ /* 46 */ @media (max-width: 1024px) {
+ /* 47 */     .home-cards {
+ /* 48 */         grid-template-columns: repeat(2, 1fr);
+ /* 49 */     }
+ /* 50 */ }
+ /* 51 */
+ /* 52 */ @media (max-width: 640px) {
+ /* 53 */     .home-cards {
+ /* 54 */         grid-template-columns: 1fr;
+ /* 55 */     }
+ /* 56 */ }

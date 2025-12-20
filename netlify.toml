@@ -1,0 +1,83 @@
+# 01 #############################################################################
+# 02 # Netlify Configuration — ServicesBI
+# 03 # Projeto: Site estático HTML/CSS puro
+# 04 # Objetivo: Evitar 404, padronizar URLs e garantir deploy estável
+# 05 #############################################################################
+
+# 06 [build]
+# 07 publish = "."
+# 08 command = ""
+
+# 09 #############################################################################
+# 10 # REDIRECTS — URLs amigáveis (sem .html)
+# 11 #############################################################################
+
+# 12 [[redirects]]
+# 13 from = "/python"
+# 14 to = "/python.html"
+# 15 status = 200
+
+# 16 [[redirects]]
+# 17 from = "/powerbi"
+# 18 to = "/powerbi.html"
+# 19 status = 200
+
+# 20 [[redirects]]
+# 21 from = "/automacoes-ia"
+# 22 to = "/automacoes-ia.html"
+# 23 status = 200
+
+# 24 [[redirects]]
+# 25 from = "/excel"
+# 26 to = "/excel.html"
+# 27 status = 200
+
+# 28 [[redirects]]
+# 29 from = "/curriculo"
+# 30 to = "/curriculo.html"
+# 31 status = 200
+
+# 32 [[redirects]]
+# 33 from = "/contato"
+# 34 to = "/contato.html"
+# 35 status = 200
+
+# 36 #############################################################################
+# 37 # FALLBACK — Segurança contra 404 inesperado
+# 38 #############################################################################
+
+# 39 [[redirects]]
+# 40 from = "/*"
+# 41 to = "/index.html"
+# 42 status = 404
+
+# 43 #############################################################################
+# 44 # HEADERS — Cache e segurança básica
+# 45 #############################################################################
+
+# 46 [[headers]]
+# 47 for = "/*"
+# 48   [headers.values]
+# 49   X-Frame-Options = "DENY"
+# 50   X-XSS-Protection = "1; mode=block"
+# 51   X-Content-Type-Options = "nosniff"
+# 52   Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 53 #############################################################################
+# 54 # CACHE — Assets estáticos
+# 55 #############################################################################
+
+# 56 [[headers]]
+# 57 for = "/css/*"
+# 58   [headers.values]
+# 59   Cache-Control = "public, max-age=31536000, immutable"
+
+# 60 [[headers]]
+# 61 for = "/img/*"
+# 62   [headers.values]
+# 63   Cache-Control = "public, max-age=31536000, immutable"
+
+# 64 [[headers]]
+# 65 for = "/js/*"
+# 66   [headers.values]
+# 67   Cache-Control = "public, max-age=31536000, immutable"
