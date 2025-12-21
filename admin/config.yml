@@ -1,13 +1,13 @@
 # =========================================================
 # STATUS:
 # [2025-12-21] Criação do config.yml do Decap CMS para o projeto ServicesBI.
-# CMS configurado para controle de conteúdo (dados),
-# sem permitir alteração de layout, HTML ou CSS.
+# [2025-12-21] Correção de schema das collections (files vs folder),
+# mantendo a arquitetura aprovada e sem impacto em layout/HTML/CSS.
 # =========================================================
 
 backend:
   name: github
-  repo: servicesbigithub/servicesbi-site
+  repo: ServicesBI/servicesbi-site
   branch: main
 
 media_folder: "img/uploads"
@@ -18,7 +18,7 @@ publish_mode: editorial_workflow
 collections:
 
   # =========================
-  # HOME - HERO
+  # HOME - HERO (ARQUIVO ÚNICO)
   # =========================
   - name: "home_hero"
     label: "Home - Hero"
@@ -33,40 +33,46 @@ collections:
           - { label: "Texto de Apoio", name: "descricao", widget: "text" }
 
   # =========================
-  # HOME - SERVIÇOS
+  # HOME - SERVIÇOS (ARQUIVO ÚNICO COM LISTA)
   # =========================
   - name: "home_servicos"
     label: "Home - Serviços"
-    file: "content/home/servicos.yml"
-    fields:
-      - label: "Serviços"
-        name: "itens"
-        widget: "list"
+    files:
+      - label: "Lista de Serviços"
+        name: "servicos"
+        file: "content/home/servicos.yml"
         fields:
-          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
-          - { label: "Título", name: "titulo", widget: "string" }
-          - { label: "Descrição", name: "descricao", widget: "text" }
-          - { label: "Ícone (imagem)", name: "icone", widget: "image" }
-          - { label: "Link", name: "link", widget: "string" }
-          - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
+          - label: "Serviços"
+            name: "itens"
+            widget: "list"
+            fields:
+              - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Ícone (imagem)", name: "icone", widget: "image" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
 
   # =========================
-  # HOME - PORTFÓLIO
+  # HOME - PORTFÓLIO (ARQUIVO ÚNICO COM LISTA)
   # =========================
   - name: "home_portfolio"
     label: "Home - Portfólio"
-    file: "content/home/portfolio-home.yml"
-    fields:
-      - label: "Projetos"
-        name: "itens"
-        widget: "list"
+    files:
+      - label: "Projetos em Destaque"
+        name: "portfolio_home"
+        file: "content/home/portfolio-home.yml"
         fields:
-          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
-          - { label: "Título", name: "titulo", widget: "string" }
-          - { label: "Categoria", name: "categoria", widget: "string" }
-          - { label: "Imagem", name: "imagem", widget: "image" }
-          - { label: "Link", name: "link", widget: "string" }
-          - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
+          - label: "Projetos"
+            name: "itens"
+            widget: "list"
+            fields:
+              - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Categoria", name: "categoria", widget: "string" }
+              - { label: "Imagem", name: "imagem", widget: "image" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
 
   # =========================
   # PORTFÓLIO - PYTHON
@@ -131,4 +137,3 @@ collections:
       - { label: "Imagem", name: "imagem", widget: "image" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
-
