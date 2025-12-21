@@ -1,8 +1,8 @@
 # =========================================================
 # STATUS:
 # [2025-12-21] Criação do config.yml do Decap CMS para o projeto ServicesBI.
-# [2025-12-21] Correção de schema das collections (files vs folder),
-# mantendo a arquitetura aprovada e sem impacto em layout/HTML/CSS.
+# [2025-12-21] Correção estrutural do schema (lista collections com - name).
+# Arquitetura aprovada, sem impacto em layout/HTML/CSS.
 # =========================================================
 
 backend:
@@ -18,7 +18,7 @@ publish_mode: editorial_workflow
 collections:
 
   # =========================
-  # HOME - HERO (ARQUIVO ÚNICO)
+  # HOME - HERO
   # =========================
   - name: "home_hero"
     label: "Home - Hero"
@@ -33,7 +33,7 @@ collections:
           - { label: "Texto de Apoio", name: "descricao", widget: "text" }
 
   # =========================
-  # HOME - SERVIÇOS (ARQUIVO ÚNICO COM LISTA)
+  # HOME - SERVIÇOS
   # =========================
   - name: "home_servicos"
     label: "Home - Serviços"
@@ -49,12 +49,12 @@ collections:
               - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Ícone (imagem)", name: "icone", widget: "image" }
+              - { label: "Ícone", name: "icone", widget: "image" }
               - { label: "Link", name: "link", widget: "string" }
               - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
 
   # =========================
-  # HOME - PORTFÓLIO (ARQUIVO ÚNICO COM LISTA)
+  # HOME - PORTFÓLIO
   # =========================
   - name: "home_portfolio"
     label: "Home - Portfólio"
