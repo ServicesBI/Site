@@ -9,9 +9,11 @@ backend:
   name: github
   repo: ServicesBI/servicesbi-site
   branch: main
-  auth_type: oauth
-  app_id: Ov23liONZAfvGknztzm2
 
+  auth_type: pkce
+  client_id: Ov23liONZAfvGknztzm2
+  auth_endpoint: https://github.com/login/oauth/authorize
+  token_endpoint: https://github.com/login/oauth/access_token
 
 
 media_folder: "img/uploads"
