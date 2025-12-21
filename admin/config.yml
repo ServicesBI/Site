@@ -1,0 +1,134 @@
+# =========================================================
+# STATUS:
+# [2025-12-21] Criação do config.yml do Decap CMS para o projeto ServicesBI.
+# CMS configurado para controle de conteúdo (dados),
+# sem permitir alteração de layout, HTML ou CSS.
+# =========================================================
+
+backend:
+  name: github
+  repo: servicesbigithub/servicesbi-site
+  branch: main
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+
+  # =========================
+  # HOME - HERO
+  # =========================
+  - name: "home_hero"
+    label: "Home - Hero"
+    files:
+      - label: "Texto Principal"
+        name: "hero"
+        file: "content/home/hero.yml"
+        fields:
+          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+          - { label: "Texto de Apoio", name: "descricao", widget: "text" }
+
+  # =========================
+  # HOME - SERVIÇOS
+  # =========================
+  - name: "home_servicos"
+    label: "Home - Serviços"
+    file: "content/home/servicos.yml"
+    fields:
+      - label: "Serviços"
+        name: "itens"
+        widget: "list"
+        fields:
+          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Descrição", name: "descricao", widget: "text" }
+          - { label: "Ícone (imagem)", name: "icone", widget: "image" }
+          - { label: "Link", name: "link", widget: "string" }
+          - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
+
+  # =========================
+  # HOME - PORTFÓLIO
+  # =========================
+  - name: "home_portfolio"
+    label: "Home - Portfólio"
+    file: "content/home/portfolio-home.yml"
+    fields:
+      - label: "Projetos"
+        name: "itens"
+        widget: "list"
+        fields:
+          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Categoria", name: "categoria", widget: "string" }
+          - { label: "Imagem", name: "imagem", widget: "image" }
+          - { label: "Link", name: "link", widget: "string" }
+          - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
+
+  # =========================
+  # PORTFÓLIO - PYTHON
+  # =========================
+  - name: "python"
+    label: "Projetos Python"
+    folder: "content/python"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Descrição", name: "descricao", widget: "text" }
+      - { label: "Imagem", name: "imagem", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
+
+  # =========================
+  # PORTFÓLIO - POWER BI
+  # =========================
+  - name: "powerbi"
+    label: "Projetos Power BI"
+    folder: "content/powerbi"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Descrição", name: "descricao", widget: "text" }
+      - { label: "Imagem", name: "imagem", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
+
+  # =========================
+  # PORTFÓLIO - EXCEL
+  # =========================
+  - name: "excel"
+    label: "Projetos Excel"
+    folder: "content/excel"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Descrição", name: "descricao", widget: "text" }
+      - { label: "Imagem", name: "imagem", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
+
+  # =========================
+  # PORTFÓLIO - AUTOMAÇÕES / IA
+  # =========================
+  - name: "automacoes"
+    label: "Automações & IA"
+    folder: "content/automacoes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Descrição", name: "descricao", widget: "text" }
+      - { label: "Imagem", name: "imagem", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
+
