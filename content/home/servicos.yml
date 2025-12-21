@@ -1,0 +1,7 @@
+itens:
+  - ativo: true
+    titulo: "Power BI"
+    descricao: "Dashboards profissionais"
+    icone: "img/uploads/powerbi.png"
+    link: "/powerbi.html"
+    ordem: 1

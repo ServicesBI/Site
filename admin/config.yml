@@ -1,15 +1,6 @@
-# =========================================================
-# STATUS:
-# [2025-12-21] Criação do config.yml do Decap CMS para o projeto ServicesBI.
-# [2025-12-21] Correção estrutural do schema (lista collections com - name).
-# Arquitetura aprovada, sem impacto em layout/HTML/CSS.
-# =========================================================
-
 backend:
-  name: github
-  repo: ServicesBI/servicesbi-site
+  name: git-gateway
   branch: main
-
 
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
@@ -17,10 +8,6 @@ public_folder: "/img/uploads"
 publish_mode: editorial_workflow
 
 collections:
-
-  # =========================
-  # HOME - HERO
-  # =========================
   - name: "home_hero"
     label: "Home - Hero"
     files:
@@ -33,9 +20,6 @@ collections:
           - { label: "Subtítulo", name: "subtitulo", widget: "string" }
           - { label: "Texto de Apoio", name: "descricao", widget: "text" }
 
-  # =========================
-  # HOME - SERVIÇOS
-  # =========================
   - name: "home_servicos"
     label: "Home - Serviços"
     files:
@@ -54,9 +38,6 @@ collections:
               - { label: "Link", name: "link", widget: "string" }
               - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
 
-  # =========================
-  # HOME - PORTFÓLIO
-  # =========================
   - name: "home_portfolio"
     label: "Home - Portfólio"
     files:
@@ -75,60 +56,9 @@ collections:
               - { label: "Link", name: "link", widget: "string" }
               - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
 
-  # =========================
-  # PORTFÓLIO - PYTHON
-  # =========================
   - name: "python"
     label: "Projetos Python"
     folder: "content/python"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
-      - { label: "Título", name: "titulo", widget: "string" }
-      - { label: "Descrição", name: "descricao", widget: "text" }
-      - { label: "Imagem", name: "imagem", widget: "image" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
-
-  # =========================
-  # PORTFÓLIO - POWER BI
-  # =========================
-  - name: "powerbi"
-    label: "Projetos Power BI"
-    folder: "content/powerbi"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
-      - { label: "Título", name: "titulo", widget: "string" }
-      - { label: "Descrição", name: "descricao", widget: "text" }
-      - { label: "Imagem", name: "imagem", widget: "image" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
-
-  # =========================
-  # PORTFÓLIO - EXCEL
-  # =========================
-  - name: "excel"
-    label: "Projetos Excel"
-    folder: "content/excel"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
-      - { label: "Título", name: "titulo", widget: "string" }
-      - { label: "Descrição", name: "descricao", widget: "text" }
-      - { label: "Imagem", name: "imagem", widget: "image" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
-
-  # =========================
-  # PORTFÓLIO - AUTOMAÇÕES / IA
-  # =========================
-  - name: "automacoes"
-    label: "Automações & IA"
-    folder: "content/automacoes"
     create: true
     slug: "{{slug}}"
     fields:

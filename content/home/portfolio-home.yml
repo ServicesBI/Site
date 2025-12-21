@@ -1,0 +1,7 @@
+itens:
+  - ativo: true
+    titulo: "Projeto Exemplo"
+    categoria: "Python"
+    imagem: "img/uploads/projeto.png"
+    link: "/python.html"
+    ordem: 1
