@@ -1,96 +1,58 @@
-// ==================================================
-// JS principal ServicesBI
-//
-// ETAPA 1 — HERO
-// ETAPA 2 — SERVIÇOS
-// ETAPA 3 — PORTFÓLIO HOME
-// ETAPA 4 — PYTHON
-// ETAPA 5 — POWER BI
-// ETAPA 6 — AUTOMAÇÕES
-// ETAPA 7 — EXCEL
-//
-// STATUS:
-// [2025-12-21] Integração CMS Home.
-// [2025-12-22] Padrão definitivo CMS (projetos).
-// [2025-12-22] Integração completa páginas internas.
-// [2025-12-22] Correção Portfólio Home (função loadPortfolioHome).
-// [2025-12-22] Hotfix: desativação temporária de loadHero e loadServices.
-// ==================================================
+// ===============================
+// ServicesBI - CMS Loader
+// main.js (COMPLETO)
+// ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ⚠️ Temporariamente desativado (funções ainda não implementadas)
-  // loadHero();
-  // loadServices();
-
-  loadPortfolioHome();
-  loadSection("python", "python-container");
-  loadSection("powerbi", "powerbi-container");
-  loadSection("automacoes", "automacoes-container");
-  loadSection("excel", "excel-container");
+  loadServices();
 });
 
-/* =========================
-   PORTFÓLIO HOME
-========================= */
-async function loadPortfolioHome() {
-  try {
-    const container = document.getElementById("home-portfolio-container");
-    if (!container) return;
-
-    const response = await fetch("content/home/index.yml");
-    if (!response.ok) return;
-
-    const data = jsyaml.load(await response.text());
-    if (!data || data.ativo !== true || !Array.isArray(data.projetos)) return;
-
-    container.innerHTML = "";
-
-    data.projetos.forEach(p => {
-      const card = document.createElement("article");
-      card.className = "project-card";
-      card.innerHTML = `
-        <h3>${p.titulo || ""}</h3>
-        ${p.imagem ? `<img src="${p.imagem}" alt="${p.titulo}">` : ""}
-        <p>${p.descricao || ""}</p>
-        <a href="${p.link || "#"}" class="btn-project">Ver projeto</a>
-      `;
-      container.appendChild(card);
-    });
-
-  } catch (e) {
-    console.warn("Erro Portfólio Home:", e);
-  }
+// ===============================
+// UTIL: carregar YAML
+// ===============================
+async function loadYAML(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`Erro ao carregar ${path}`);
+  const text = await response.text();
+  return jsyaml.load(text);
 }
 
-/* =========================
-   FUNÇÃO GENÉRICA
-========================= */
-async function loadSection(section, containerId) {
+// ===============================
+// SERVIÇOS (GLOBAL)
+// ===============================
+async function loadServices() {
+  const container = document.getElementById("services-container");
+  if (!container) return; // página não usa serviços
+
   try {
-    const container = document.getElementById(containerId);
-    if (!container) return;
+    const data = await loadYAML("/content/services/index.yml");
 
-    const response = await fetch(`content/${section}/index.yml`);
-    if (!response.ok) return;
+    if (!data || data.ativo !== true || !Array.isArray(data.servicos)) {
+      return;
+    }
 
-    const data = jsyaml.load(await response.text());
-    if (!data || data.ativo !== true || !Array.isArray(data.projetos)) return;
+    const servicesAtivos = data.servicos.filter(s => s.ativo === true);
+    if (servicesAtivos.length === 0) return;
 
     container.innerHTML = "";
 
-    data.projetos.forEach(p => {
-      const card = document.createElement("article");
-      card.className = "project-card";
+    servicesAtivos.forEach(servico => {
+      const card = document.createElement("div");
+      card.className = "service-card";
+
       card.innerHTML = `
-        <h3>${p.titulo || ""}</h3>
-        ${p.imagem ? `<img src="${p.imagem}" alt="${p.titulo}">` : ""}
-        <p>${p.descricao || ""}</p>
-        <a href="${p.link || "#"}" class="btn-project">Ver projeto</a>
+        <div class="service-icon">
+          <i class="${servico.icone}"></i>
+        </div>
+        <h3>${servico.titulo}</h3>
+        <p>${servico.descricao}</p>
+        ${servico.link ? `<a href="${servico.link}" class="btn-service">Ver mais</a>` : ""}
       `;
+
       container.appendChild(card);
     });
 
-  } catch (e) {
-    console.warn(`Erro seção ${section}:`, e);
+  } catch (error) {
+    console.error("Erro ao carregar Serviços:", error);
   }
 }
