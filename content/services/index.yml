@@ -1,0 +1,20 @@
+ativo: true
+
+servicos:
+  - ativo: true
+    titulo: "Business Intelligence"
+    descricao: "Dashboards e análises estratégicas"
+    icone: "fa-solid fa-chart-line"
+    link: "powerbi.html"
+
+  - ativo: true
+    titulo: "Automação & IA"
+    descricao: "Processos automatizados e inteligência artificial"
+    icone: "fa-solid fa-robot"
+    link: "automacoes.html"
+
+  - ativo: true
+    titulo: "Python & Dados"
+    descricao: "Soluções em Python, ETL e análise de dados"
+    icone: "fa-solid fa-code"
+    link: "python.html"
