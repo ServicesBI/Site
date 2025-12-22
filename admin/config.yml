@@ -120,3 +120,35 @@ collections:
       - { label: "Descrição", name: "descricao", widget: "text" }
       - { label: "Imagem", name: "imagem", widget: "image" }
       - { label: "Link", name: "link", widget: "string" }
+
+  # =========================
+  # SERVIÇOS (GLOBAL)
+  # =========================
+  - name: "services"
+    label: "Serviços"
+    files:
+      - label: "Lista de Serviços"
+        name: "services"
+        file: "content/services/index.yml"
+        fields:
+          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+          - label: "Serviços"
+            name: "servicos"
+            widget: "list"
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Link", name: "link", widget: "string" }
+              - label: "Ícone"
+                name: "icone"
+                widget: "select"
+                options:
+                  - "fa-solid fa-chart-line"
+                  - "fa-solid fa-database"
+                  - "fa-solid fa-robot"
+                  - "fa-solid fa-code"
+                  - "fa-solid fa-file-excel"
+                  - "fa-solid fa-gears"
+                  - "fa-solid fa-brain"
