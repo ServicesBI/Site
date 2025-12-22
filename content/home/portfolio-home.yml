@@ -1,39 +1,38 @@
+# =========================================================
+# STATUS:
+# [2025-12-21] Criação do portfolio-home.yml para cards dinâmicos da Home.
+# [2025-12-22] Consolidação do padrão definitivo de cards (imagem + título + link).
+# =========================================================
+
 ativo: true
 
-itens:
-  - ativo: true
-    titulo: "Projeto 01"
-    imagem: "img/uploads/projeto1.png"
+projetos:
+  - titulo: "Projeto 01"
+    descricao: "Projeto 01"
+    imagem: "img/uploads/projeto-01.png"
     link: "/python.html"
-    ordem: 1
 
-  - ativo: true
-    titulo: "Projeto 02"
-    imagem: "img/uploads/projeto2.png"
+  - titulo: "Projeto 02"
+    descricao: "Projeto 02"
+    imagem: "img/uploads/projeto-02.png"
     link: "/powerbi.html"
-    ordem: 2
 
-  - ativo: true
-    titulo: "Projeto 03"
-    imagem: "img/uploads/projeto3.png"
+  - titulo: "Projeto 03"
+    descricao: "Projeto 03"
+    imagem: "img/uploads/projeto-03.png"
+    link: "/automacoes.html"
+
+  - titulo: "Projeto 04"
+    descricao: "Projeto 04"
+    imagem: "img/uploads/projeto-04.png"
     link: "/excel.html"
-    ordem: 3
 
-  - ativo: true
-    titulo: "Projeto 04"
-    imagem: "img/uploads/projeto4.png"
-    link: "/python.html"
-    ordem: 4
+  - titulo: "Projeto 05"
+    descricao: "Projeto 05"
+    imagem: "img/uploads/projeto-05.png"
+    link: "https://github.com/ServicesBI"
 
-  - ativo: true
-    titulo: "Projeto 05"
-    imagem: "img/uploads/projeto5.png"
-    link: "/powerbi.html"
-    ordem: 5
-
-  - ativo: true
-    titulo: "Projeto 06"
-    imagem: "img/uploads/projeto6.png"
-    link: "/excel.html"
-    ordem: 6
-
+  - titulo: "Projeto 06"
+    descricao: "Projeto 06"
+    imagem: "img/uploads/projeto-06.png"
+    link: "#"
