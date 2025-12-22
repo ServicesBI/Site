@@ -1,18 +1,6 @@
-# =========================================================
-# STATUS:
-# [2025-12-21] Criação do config.yml do Decap CMS para o projeto ServicesBI.
-# [2025-12-21] Correção estrutural do schema (lista collections com - name).
-# Arquitetura aprovada, sem impacto em layout/HTML/CSS.
-# =========================================================
-
-site_url: https://servicesbi-auth.netlify.app
-display_url: https://servicesbi-auth.netlify.app
-
-
 backend:
   name: git-gateway
   branch: main
-
 
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
@@ -34,28 +22,28 @@ collections:
           - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
           - { label: "Título", name: "titulo", widget: "string" }
           - { label: "Subtítulo", name: "subtitulo", widget: "string" }
-          - { label: "Texto de Apoio", name: "descricao", widget: "text" }
+          - { label: "Texto de Apoio", name: "texto_apoio", widget: "text" }
 
   # =========================
   # HOME - SERVIÇOS
   # =========================
-  - name: "home_servicos"
+  - name: "home_services"
     label: "Home - Serviços"
     files:
-      - label: "Lista de Serviços"
-        name: "servicos"
-        file: "content/home/servicos.yml"
+      - label: "Serviços da Home"
+        name: "services"
+        file: "content/home/services.yml"
         fields:
-          - label: "Serviços"
-            name: "itens"
+          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+          - { label: "Título da Seção", name: "titulo", widget: "string" }
+          - { label: "Descrição da Seção", name: "descricao", widget: "text" }
+          - label: "Lista de Serviços"
+            name: "servicos"
             widget: "list"
             fields:
-              - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Ícone", name: "icone", widget: "image" }
-              - { label: "Link", name: "link", widget: "string" }
-              - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
+              - { label: "Ícone", name: "icone", widget: "image", required: false }
 
   # =========================
   # HOME - PORTFÓLIO
@@ -64,80 +52,71 @@ collections:
     label: "Home - Portfólio"
     files:
       - label: "Projetos em Destaque"
-        name: "portfolio_home"
+        name: "portfolio"
         file: "content/home/portfolio-home.yml"
         fields:
+          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
           - label: "Projetos"
-            name: "itens"
+            name: "projetos"
             widget: "list"
             fields:
-              - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
               - { label: "Título", name: "titulo", widget: "string" }
-              - { label: "Categoria", name: "categoria", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
               - { label: "Imagem", name: "imagem", widget: "image" }
               - { label: "Link", name: "link", widget: "string" }
-              - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
 
   # =========================
-  # PORTFÓLIO - PYTHON
+  # PROJETOS - PYTHON
   # =========================
-  - name: "python"
-    label: "Projetos Python"
+  - name: "projetos_python"
+    label: "Projetos - Python"
     folder: "content/python"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
       - { label: "Título", name: "titulo", widget: "string" }
       - { label: "Descrição", name: "descricao", widget: "text" }
       - { label: "Imagem", name: "imagem", widget: "image" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
 
   # =========================
-  # PORTFÓLIO - POWER BI
+  # PROJETOS - POWER BI
   # =========================
-  - name: "powerbi"
-    label: "Projetos Power BI"
+  - name: "projetos_powerbi"
+    label: "Projetos - Power BI"
     folder: "content/powerbi"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
       - { label: "Título", name: "titulo", widget: "string" }
       - { label: "Descrição", name: "descricao", widget: "text" }
       - { label: "Imagem", name: "imagem", widget: "image" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
 
   # =========================
-  # PORTFÓLIO - EXCEL
+  # PROJETOS - EXCEL
   # =========================
-  - name: "excel"
-    label: "Projetos Excel"
+  - name: "projetos_excel"
+    label: "Projetos - Excel"
     folder: "content/excel"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
       - { label: "Título", name: "titulo", widget: "string" }
       - { label: "Descrição", name: "descricao", widget: "text" }
       - { label: "Imagem", name: "imagem", widget: "image" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }
 
   # =========================
-  # PORTFÓLIO - AUTOMAÇÕES / IA
+  # AUTOMAÇÕES & IA
   # =========================
-  - name: "automacoes"
+  - name: "automacoes_ia"
     label: "Automações & IA"
     folder: "content/automacoes"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
       - { label: "Título", name: "titulo", widget: "string" }
       - { label: "Descrição", name: "descricao", widget: "text" }
       - { label: "Imagem", name: "imagem", widget: "image" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Ordem", name: "ordem", widget: "number", default: 1 }

@@ -1,7 +1,39 @@
+ativo: true
+
 itens:
   - ativo: true
-    titulo: "Projeto Exemplo"
-    categoria: "Python"
-    imagem: "img/uploads/projeto.png"
+    titulo: "Projeto 01"
+    imagem: "img/uploads/projeto1.png"
     link: "/python.html"
     ordem: 1
+
+  - ativo: true
+    titulo: "Projeto 02"
+    imagem: "img/uploads/projeto2.png"
+    link: "/powerbi.html"
+    ordem: 2
+
+  - ativo: true
+    titulo: "Projeto 03"
+    imagem: "img/uploads/projeto3.png"
+    link: "/excel.html"
+    ordem: 3
+
+  - ativo: true
+    titulo: "Projeto 04"
+    imagem: "img/uploads/projeto4.png"
+    link: "/python.html"
+    ordem: 4
+
+  - ativo: true
+    titulo: "Projeto 05"
+    imagem: "img/uploads/projeto5.png"
+    link: "/powerbi.html"
+    ordem: 5
+
+  - ativo: true
+    titulo: "Projeto 06"
+    imagem: "img/uploads/projeto6.png"
+    link: "/excel.html"
+    ordem: 6
+
