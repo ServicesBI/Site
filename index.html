@@ -1,22 +1,10 @@
-<!-- ============================================================================= -->
-<!-- ARQUIVO: /index.html                                                          -->
-<!-- PROJETO: ServicesBI                                                           -->
-<!-- STATUS: HOME CORRIGIDA (HEADER + HERO + CARDS + FOOTER)                        -->
-<!-- STATUS: HEADER AJUSTADO (MENU CENTRAL + AVATAR)                               -->
-<!-- STATUS: CARDS DE SERVIÇOS ADICIONADOS (HOME)                                  -->
-<!-- STATUS: PATHS DAS IMAGENS AJUSTADOS PARA /img/portfolio/home/                 -->
-<!-- STATUS: ORDEM DOS ELEMENTOS DOS CARDS AJUSTADA (TÍTULO → IMAGEM → TEXTO → BOTÃO) -->
-<!-- STATUS: FOOTER COM ÍCONES E NAVEGAÇÃO CLICÁVEIS                                -->
-<!-- STATUS: TESTE DEPLOY GIT HUB                                                   -->
-<!-- STATUS: HOME HERO CONECTADO AO DECAP VIA JS (TÍTULO + TEXTO)                  -->
-<!-- ============================================================================= -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ServicesBI</title>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -46,10 +34,13 @@
 <section class="hero hero-home">
     <div class="container hero-container">
         <h1 id="hero-title">ServicesBI</h1>
+
         <p id="hero-subtitle">
             Soluções em dados, Business Intelligence, automações
             e inteligência artificial aplicadas ao negócio.
         </p>
+
+        <p id="hero-support"></p>
     </div>
 </section>
 
@@ -178,6 +169,7 @@
 
 <!-- ================= SCRIPTS ================= -->
 
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 <script src="js/hero.js"></script>
 
 </body>
