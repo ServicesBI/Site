@@ -1,58 +1,145 @@
-// ===============================
-// ServicesBI - CMS Loader
-// main.js (COMPLETO)
-// ===============================
+/* =====================================================
+   SERVICESBI - MAIN JS
+   STATUS:
+   [2025-12-22] Correção definitiva dos caminhos relativos do CMS
+   [2025-12-22] Hero global via CMS por página (hero.yml)
+   [2025-12-22] Serviços globais via CMS (services/index.yml)
+   [2025-12-22] Portfólio Home via CMS
+===================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadServices();
-});
+/* =====================================================
+   UTIL
+===================================================== */
 
-// ===============================
-// UTIL: carregar YAML
-// ===============================
 async function loadYAML(path) {
   const response = await fetch(path);
-  if (!response.ok) throw new Error(`Erro ao carregar ${path}`);
+  if (!response.ok) {
+    throw new Error(`Erro ao carregar ${path}`);
+  }
   const text = await response.text();
   return jsyaml.load(text);
 }
 
-// ===============================
-// SERVIÇOS (GLOBAL)
-// ===============================
-async function loadServices() {
-  const container = document.getElementById("services-container");
-  if (!container) return; // página não usa serviços
+/* =====================================================
+   HERO GLOBAL - CMS
+===================================================== */
+
+async function loadHero() {
+  const pageTitleEl = document.getElementById("page-title");
+  const pageSubtitleEl = document.getElementById("page-subtitle");
+  const heroSection = document.querySelector(".hero");
+
+  if (!heroSection || !pageTitleEl) return;
+
+  let page = window.location.pathname
+    .split("/")
+    .pop()
+    .replace(".html", "");
+
+  if (page === "" || page === "index") {
+    page = "home";
+  }
+
+  const heroPath = `content/${page}/hero.yml`;
 
   try {
-    const data = await loadYAML("/content/services/index.yml");
+    const heroData = await loadYAML(heroPath);
 
-    if (!data || data.ativo !== true || !Array.isArray(data.servicos)) {
-      return;
+    if (!heroData || heroData.ativo === false) return;
+
+    if (heroData.titulo) {
+      pageTitleEl.textContent = heroData.titulo;
     }
 
-    const servicesAtivos = data.servicos.filter(s => s.ativo === true);
-    if (servicesAtivos.length === 0) return;
+    if (heroData.subtitulo && pageSubtitleEl) {
+      pageSubtitleEl.textContent = heroData.subtitulo;
+    }
+
+    if (heroData.imagem) {
+      heroSection.style.backgroundImage = `url('${heroData.imagem}')`;
+    }
+
+  } catch (error) {
+    console.warn(`Hero não carregado (${page}):`, error.message);
+  }
+}
+
+/* =====================================================
+   SERVIÇOS - GLOBAL (TODAS AS PÁGINAS)
+===================================================== */
+
+async function loadServices() {
+  const container = document.getElementById("services-container");
+  if (!container) return;
+
+  try {
+    const data = await loadYAML("content/services/index.yml");
+
+    if (!data || data.ativo === false || !data.servicos) return;
 
     container.innerHTML = "";
 
-    servicesAtivos.forEach(servico => {
+    data.servicos.forEach(servico => {
+      if (servico.ativo === false) return;
+
       const card = document.createElement("div");
       card.className = "service-card";
 
       card.innerHTML = `
-        <div class="service-icon">
-          <i class="${servico.icone}"></i>
-        </div>
+        <i class="${servico.icone}"></i>
         <h3>${servico.titulo}</h3>
         <p>${servico.descricao}</p>
-        ${servico.link ? `<a href="${servico.link}" class="btn-service">Ver mais</a>` : ""}
+        <a href="${servico.link}">Ver mais</a>
       `;
 
       container.appendChild(card);
     });
 
   } catch (error) {
-    console.error("Erro ao carregar Serviços:", error);
+    console.warn("Serviços não carregados:", error.message);
   }
 }
+
+/* =====================================================
+   PORTFÓLIO - HOME
+===================================================== */
+
+async function loadHomePortfolio() {
+  const container = document.getElementById("home-portfolio-container");
+  if (!container) return;
+
+  try {
+    const data = await loadYAML("content/home/portfolio-home.yml");
+
+    if (!data || data.ativo === false || !data.projetos) return;
+
+    container.innerHTML = "";
+
+    data.projetos.forEach(projeto => {
+      const card = document.createElement("div");
+      card.className = "project-card";
+
+      card.innerHTML = `
+        <img src="${projeto.imagem}" alt="${projeto.titulo}">
+        <h3>${projeto.titulo}</h3>
+        <p>${projeto.descricao}</p>
+        <a href="${projeto.link}" class="btn">Ver projeto</a>
+      `;
+
+      container.appendChild(card);
+    });
+
+  } catch (error) {
+    console.warn("Portfólio Home não carregado:", error.message);
+  }
+}
+
+/* =====================================================
+   INIT
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadHero();
+  loadServices();
+  loadHomePortfolio();
+});
