@@ -1,16 +1,18 @@
 /* =====================================================
-   SERVICESBI - MAIN JS
+   ARQUIVO: js/main.js
+   PROJETO: ServicesBI
+
    STATUS:
-   [2025-12-22] Correção definitiva dos caminhos relativos do CMS
-   [2025-12-22] Hero global via CMS por página (hero.yml)
-   [2025-12-22] Serviços globais via CMS (services/index.yml)
-   [2025-12-22] Portfólio Home via CMS
+   [2025-12-21] Integração inicial com Decap CMS.
+   [2025-12-22] Correção do padrão CMS (projetos -> projetos).
+   [2025-12-22] HERO GLOBAL via CMS (hero.yml por página).
+   [2025-12-22] Serviços GLOBAIS via CMS (services/index.yml).
+   [2025-12-22] Padronização para todas as páginas com services-container.
 ===================================================== */
 
 /* =====================================================
-   UTIL
+   UTIL — CARREGAMENTO YAML
 ===================================================== */
-
 async function loadYAML(path) {
   const response = await fetch(path);
   if (!response.ok) {
@@ -21,15 +23,15 @@ async function loadYAML(path) {
 }
 
 /* =====================================================
-   HERO GLOBAL - CMS
+   HERO GLOBAL — CMS
+   Carrega: content/{pagina}/hero.yml
 ===================================================== */
-
 async function loadHero() {
-  const pageTitleEl = document.getElementById("page-title");
-  const pageSubtitleEl = document.getElementById("page-subtitle");
   const heroSection = document.querySelector(".hero");
+  const titleEl = document.getElementById("page-title");
+  const subtitleEl = document.getElementById("page-subtitle");
 
-  if (!heroSection || !pageTitleEl) return;
+  if (!heroSection || !titleEl) return;
 
   let page = window.location.pathname
     .split("/")
@@ -43,20 +45,20 @@ async function loadHero() {
   const heroPath = `content/${page}/hero.yml`;
 
   try {
-    const heroData = await loadYAML(heroPath);
+    const data = await loadYAML(heroPath);
 
-    if (!heroData || heroData.ativo === false) return;
+    if (!data || data.ativo === false) return;
 
-    if (heroData.titulo) {
-      pageTitleEl.textContent = heroData.titulo;
+    if (data.titulo) {
+      titleEl.textContent = data.titulo;
     }
 
-    if (heroData.subtitulo && pageSubtitleEl) {
-      pageSubtitleEl.textContent = heroData.subtitulo;
+    if (data.subtitulo && subtitleEl) {
+      subtitleEl.textContent = data.subtitulo;
     }
 
-    if (heroData.imagem) {
-      heroSection.style.backgroundImage = `url('${heroData.imagem}')`;
+    if (data.imagem) {
+      heroSection.style.backgroundImage = `url('${data.imagem}')`;
     }
 
   } catch (error) {
@@ -65,9 +67,10 @@ async function loadHero() {
 }
 
 /* =====================================================
-   SERVIÇOS - GLOBAL (TODAS AS PÁGINAS)
+   SERVIÇOS GLOBAIS — CMS
+   Carrega: content/services/index.yml
+   Renderiza onde existir #services-container
 ===================================================== */
-
 async function loadServices() {
   const container = document.getElementById("services-container");
   if (!container) return;
@@ -75,21 +78,21 @@ async function loadServices() {
   try {
     const data = await loadYAML("content/services/index.yml");
 
-    if (!data || data.ativo === false || !data.servicos) return;
+    if (!data || data.ativo === false || !Array.isArray(data.servicos)) return;
 
     container.innerHTML = "";
 
     data.servicos.forEach(servico => {
       if (servico.ativo === false) return;
 
-      const card = document.createElement("div");
+      const card = document.createElement("article");
       card.className = "service-card";
 
       card.innerHTML = `
         <i class="${servico.icone}"></i>
         <h3>${servico.titulo}</h3>
         <p>${servico.descricao}</p>
-        <a href="${servico.link}">Ver mais</a>
+        ${servico.link ? `<a href="${servico.link}" class="btn-service">Ver mais</a>` : ""}
       `;
 
       container.appendChild(card);
@@ -101,9 +104,9 @@ async function loadServices() {
 }
 
 /* =====================================================
-   PORTFÓLIO - HOME
+   PORTFÓLIO — HOME
+   Carrega: content/home/portfolio-home.yml
 ===================================================== */
-
 async function loadHomePortfolio() {
   const container = document.getElementById("home-portfolio-container");
   if (!container) return;
@@ -111,19 +114,19 @@ async function loadHomePortfolio() {
   try {
     const data = await loadYAML("content/home/portfolio-home.yml");
 
-    if (!data || data.ativo === false || !data.projetos) return;
+    if (!data || data.ativo === false || !Array.isArray(data.projetos)) return;
 
     container.innerHTML = "";
 
     data.projetos.forEach(projeto => {
-      const card = document.createElement("div");
+      const card = document.createElement("article");
       card.className = "project-card";
 
       card.innerHTML = `
         <img src="${projeto.imagem}" alt="${projeto.titulo}">
         <h3>${projeto.titulo}</h3>
         <p>${projeto.descricao}</p>
-        <a href="${projeto.link}" class="btn">Ver projeto</a>
+        <a href="${projeto.link}" class="btn-project">Ver projeto</a>
       `;
 
       container.appendChild(card);
@@ -137,7 +140,6 @@ async function loadHomePortfolio() {
 /* =====================================================
    INIT
 ===================================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
   loadHero();
   loadServices();
