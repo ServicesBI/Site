@@ -5,151 +5,125 @@ backend:
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
 
-publish_mode: editorial_workflow
+site_url: https://servicesbi.com.br
 
 collections:
 
-  # =========================
-  # HOME - HERO
-  # =========================
-  - name: "home_hero"
-    label: "Home - Hero"
+  # =====================================================
+  # HOME
+  # =====================================================
+  - label: "Home"
+    name: "home"
     files:
-      - label: "Texto Principal"
+      - label: "Hero"
         name: "hero"
         file: "content/home/hero.yml"
         fields:
           - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
           - { label: "Título", name: "titulo", widget: "string" }
           - { label: "Subtítulo", name: "subtitulo", widget: "string" }
-          - { label: "Texto de Apoio", name: "texto_apoio", widget: "text" }
-          - { label: "Imagem do Banner", name: "imagem", widget: "image", required: false }
+          - { label: "Imagem", name: "imagem", widget: "image" }
 
-  # =========================
-  # HOME - SERVIÇOS
-  # =========================
-  - name: "home_services"
-    label: "Home - Serviços"
-    files:
-      - label: "Serviços da Home"
+      - label: "Banners"
+        name: "banners"
+        file: "content/home/banners.yml"
+        fields:
+          - label: "Banners"
+            name: "banners"
+            widget: "list"
+            fields:
+              - { label: "Imagem", name: "imagem", widget: "image" }
+              - { label: "Texto", name: "texto", widget: "string" }
+              - { label: "Link", name: "link", widget: "string", required: false }
+              - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+
+      - label: "Serviços"
         name: "services"
         file: "content/home/services.yml"
         fields:
-          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
-          - { label: "Título da Seção", name: "titulo", widget: "string" }
-          - { label: "Descrição da Seção", name: "descricao", widget: "text" }
-          - label: "Lista de Serviços"
+          - { label: "Ativar seção", name: "ativo", widget: "boolean", default: true }
+          - label: "Serviços exibidos"
             name: "servicos"
             widget: "list"
             fields:
-              - { label: "Título", name: "titulo", widget: "string" }
-              - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Ícone", name: "icone", widget: "image", required: false }
+              - { label: "Slug do serviço", name: "slug", widget: "string" }
 
-  # =========================
-  # HOME - PORTFÓLIO
-  # =========================
-  - name: "home_portfolio"
-    label: "Home - Portfólio"
-    files:
-      - label: "Projetos em Destaque"
-        name: "portfolio"
-        file: "content/home/portfolio-home.yml"
+      - label: "Projetos"
+        name: "projects"
+        file: "content/home/projects.yml"
         fields:
-          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
           - label: "Projetos"
             name: "projetos"
             widget: "list"
             fields:
-              - { label: "Título", name: "titulo", widget: "string" }
-              - { label: "Descrição", name: "descricao", widget: "text" }
               - { label: "Imagem", name: "imagem", widget: "image" }
-              - { label: "Link", name: "link", widget: "string" }
-
-  # =========================
-  # PROJETOS - PYTHON
-  # =========================
-  - name: "projetos_python"
-    label: "Projetos - Python"
-    folder: "content/python"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "titulo", widget: "string" }
-      - { label: "Descrição", name: "descricao", widget: "text" }
-      - { label: "Imagem", name: "imagem", widget: "image" }
-      - { label: "Link", name: "link", widget: "string" }
-
-  # =========================
-  # PROJETOS - POWER BI
-  # =========================
-  - name: "projetos_powerbi"
-    label: "Projetos - Power BI"
-    folder: "content/powerbi"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "titulo", widget: "string" }
-      - { label: "Descrição", name: "descricao", widget: "text" }
-      - { label: "Imagem", name: "imagem", widget: "image" }
-      - { label: "Link", name: "link", widget: "string" }
-
-  # =========================
-  # PROJETOS - EXCEL
-  # =========================
-  - name: "projetos_excel"
-    label: "Projetos - Excel"
-    folder: "content/excel"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "titulo", widget: "string" }
-      - { label: "Descrição", name: "descricao", widget: "text" }
-      - { label: "Imagem", name: "imagem", widget: "image" }
-      - { label: "Link", name: "link", widget: "string" }
-
-  # =========================
-  # AUTOMAÇÕES & IA
-  # =========================
-  - name: "automacoes_ia"
-    label: "Automações & IA"
-    folder: "content/automacoes"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "titulo", widget: "string" }
-      - { label: "Descrição", name: "descricao", widget: "text" }
-      - { label: "Imagem", name: "imagem", widget: "image" }
-      - { label: "Link", name: "link", widget: "string" }
-
-  # =========================
-  # SERVIÇOS (GLOBAL)
-  # =========================
-  - name: "services"
-    label: "Serviços"
-    files:
-      - label: "Lista de Serviços"
-        name: "services"
-        file: "content/services/index.yml"
-        fields:
-          - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
-          - label: "Serviços"
-            name: "servicos"
-            widget: "list"
-            summary: "{{fields.titulo}}"
-            fields:
-              - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Link", name: "link", widget: "string" }
-              - label: "Ícone"
-                name: "icone"
-                widget: "select"
-                options:
-                  - "fa-solid fa-chart-line"
-                  - "fa-solid fa-database"
-                  - "fa-solid fa-robot"
-                  - "fa-solid fa-code"
-                  - "fa-solid fa-file-excel"
-                  - "fa-solid fa-gears"
-                  - "fa-solid fa-brain"
+              - { label: "Link (botão Ver projeto)", name: "link", widget: "string" }
+              - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+
+  # =====================================================
+  # PYTHON / POWERBI / AUTOMAÇÕES / EXCEL
+  # (mesmo modelo, só muda a pasta)
+  # =====================================================
+
+  - label: "Python"
+    name: "python"
+    folder: "content/python"
+    create: false
+    files: []
+
+  - label: "PowerBI"
+    name: "powerbi"
+    folder: "content/powerbi"
+    create: false
+    files: []
+
+  - label: "Automações - IA"
+    name: "automacoes"
+    folder: "content/automacoes"
+    create: false
+    files: []
+
+  - label: "Excel"
+    name: "excel"
+    folder: "content/excel"
+    create: false
+    files: []
+
+  # =====================================================
+  # CURRÍCULO
+  # =====================================================
+  - label: "Currículo"
+    name: "curriculo"
+    files:
+      - label: "Hero"
+        name: "hero"
+        file: "content/curriculo/hero.yml"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+          - { label: "Imagem", name: "imagem", widget: "image" }
+
+      - label: "Textos"
+        name: "textos"
+        file: "content/curriculo/textos.yml"
+        fields:
+          - { label: "Resumo", name: "resumo", widget: "text" }
+          - { label: "Experiência", name: "experiencia", widget: "text" }
+          - { label: "Formação", name: "formacao", widget: "text" }
+          - { label: "Certificações", name: "certificacoes", widget: "text" }
+
+  # =====================================================
+  # CONTATO
+  # =====================================================
+  - label: "Contato"
+    name: "contato"
+    files:
+      - label: "Hero"
+        name: "hero"
+        file: "content/contato/hero.yml"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+          - { label: "Imagem", name: "imagem", widget: "image" }
