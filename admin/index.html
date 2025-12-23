@@ -1,34 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>ServicesBI | Admin</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ServicesBI | CMS</title>
+
+  <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
 </head>
 <body>
-
-  <!-- Root do Decap CMS -->
-  <div id="nc-root"></div>
-
-  <!-- Netlify Identity (OBRIGATÓRIO para convite funcionar) -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-  <!-- Script de inicialização do Identity -->
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-
-  <!-- Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
-
 </body>
 </html>
-
