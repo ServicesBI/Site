@@ -5,14 +5,10 @@ backend:
 media_folder: "public/img/uploads"
 public_folder: "/public/img/uploads"
 
-site_url: https://www.servicesbi.com.br
-display_url: https://www.servicesbi.com.br
+site_url: "https://www.servicesbi.com.br"
+display_url: "https://www.servicesbi.com.br"
 
 collections:
-
-  # =========================
-  # PÁGINAS DO SITE
-  # =========================
   - name: "pages"
     label: "Páginas"
     folder: "content/pages"
@@ -21,13 +17,17 @@ collections:
     format: "frontmatter"
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição", name: "description", widget: "text", required: false }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - label: "Título"
+        name: "title"
+        widget: "string"
+      - label: "Descrição"
+        name: "description"
+        widget: "text"
+        required: false
+      - label: "Conteúdo"
+        name: "body"
+        widget: "markdown"
 
-  # =========================
-  # SERVIÇOS (CARDS)
-  # =========================
   - name: "services"
     label: "Serviços"
     files:
@@ -39,14 +39,21 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - { label: "Título", name: "title", widget: "string" }
-              - { label: "Descrição", name: "description", widget: "text" }
-              - { label: "Ícone", name: "icon", widget: "string", required: false }
-              - { label: "Link", name: "link", widget: "string", required: false }
+              - label: "Título"
+                name: "title"
+                widget: "string"
+              - label: "Descrição"
+                name: "description"
+                widget: "text"
+              - label: "Ícone"
+                name: "icon"
+                widget: "string"
+                required: false
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                required: false
 
-  # =========================
-  # PORTFÓLIO
-  # =========================
   - name: "portfolio"
     label: "Portfólio"
     files:
@@ -58,8 +65,20 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - { label: "Título", name: "title", widget: "string" }
-              - { label: "Descrição", name: "description", widget: "text" }
-              - { label: "Categoria", name: "category", widget: "string" }
-              - { label: "Imagem", name: "image", widget: "image", required: false }
-              - { label: "Link", name: "link", widget: "string", required: false }
+              - label: "Título"
+                name: "title"
+                widget: "string"
+              - label: "Descrição"
+                name: "description"
+                widget: "text"
+              - label: "Categoria"
+                name: "category"
+                widget: "string"
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                required: false
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                required: false
