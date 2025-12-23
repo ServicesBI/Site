@@ -1,5 +1,12 @@
-ativo: true
-titulo: "Teste 1 111 "
-subtitulo: "Teste 2 222 "
-descricao: "Teste 3 "
-texto_apoio: "333 "
+- name: "home_hero"
+  label: "Home - Hero"
+  files:
+    - label: "Texto Principal"
+      name: "hero"
+      file: "content/home/hero.yml"
+      fields:
+        - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+        - { label: "Título", name: "titulo", widget: "string" }
+        - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+        - { label: "Texto de Apoio", name: "texto_apoio", widget: "text", required: false }
+        - { label: "Imagem do Banner", name: "imagem", widget: "image", required: false }
