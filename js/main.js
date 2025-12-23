@@ -9,6 +9,7 @@
    [2025-12-22] Serviços GLOBAIS via CMS (services/index.yml).
    [2025-12-22] Padronização para todas as páginas com services-container.
    [2025-12-23] HERO com imagem dinâmica via CMS (campo imagem).
+   [2025-12-23] Consolidação do componente CARD (service / project).
 ===================================================== */
 
 /* =====================================================
@@ -92,13 +93,13 @@ async function loadServices() {
       if (servico.ativo === false) return;
 
       const card = document.createElement("article");
-      card.className = "service-card";
+      card.className = "card card--service";
 
       card.innerHTML = `
         <i class="${servico.icone}"></i>
         <h3>${servico.titulo}</h3>
         <p>${servico.descricao}</p>
-        ${servico.link ? `<a href="${servico.link}" class="btn-service">Ver mais</a>` : ""}
+        ${servico.link ? `<a href="${servico.link}" class="btn">Ver mais</a>` : ""}
       `;
 
       container.appendChild(card);
@@ -126,13 +127,13 @@ async function loadHomePortfolio() {
 
     data.projetos.forEach(projeto => {
       const card = document.createElement("article");
-      card.className = "project-card";
+      card.className = "card card--project";
 
       card.innerHTML = `
         <img src="${projeto.imagem}" alt="${projeto.titulo}">
         <h3>${projeto.titulo}</h3>
         <p>${projeto.descricao}</p>
-        <a href="${projeto.link}" class="btn-project">Ver projeto</a>
+        <a href="${projeto.link}" class="btn">Ver projeto</a>
       `;
 
       container.appendChild(card);

@@ -1,57 +1,74 @@
-/* CARDS - HOME (PRINT 2) */
+/* ============================================================================= */
+/* ARQUIVO: /css/components/cards.css                                           */
+/* PROJETO: ServicesBI                                                          */
+/* STATUS: CONSOLIDAÇÃO DEFINITIVA DO COMPONENTE CARD                           */
+/* STATUS: [2025-12-23] CARD BASE + VARIAÇÕES SERVICE / PROJECT                 */
+/* ============================================================================= */
 
-.home-cards {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.card-home {
-    background-color: #ffffff;
+.card {
+    background: #ffffff;
     border-radius: 16px;
-    padding: 32px 24px;
-    text-align: left;
-    border: none;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(0,0,0,.10);
+    border-top: 4px solid #f2c200;
+    border-bottom: 4px solid #f2c200;
+    display: flex;
+    flex-direction: column;
 }
 
-.card-home:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+/* ================= VARIAÇÃO — SERVIÇO ================= */
+
+.card--service {
+    gap: 12px;
 }
 
-.card-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 20px;
+.card--service img,
+.card--service i {
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
-.card-icon img {
-    width: 100%;
-    height: auto;
-}
-
-.card-home h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 12px;
+.card--service h3 {
+    font-size: 15px;
     color: #1f3d2b;
 }
 
-.card-home p {
+.card--service p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* ================= VARIAÇÃO — PROJETO ================= */
+
+.card--project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.card--project h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #1f3d2b;
+}
+
+.card--project p {
     font-size: 14px;
     line-height: 1.6;
-    color: #555555;
+    color: #666;
 }
 
-@media (max-width: 1024px) {
-    .home-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.card .btn {
+    margin-top: auto;
+    align-self: center;
+    padding: 10px 26px;
+    border: 2px solid #f2c200;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1f3d2b;
+    font-style: normal;
 }
-
-@media (max-width: 640px) {
-    .home-cards {
-        grid-template-columns: 1fr;
-    }
-}
-
