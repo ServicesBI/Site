@@ -1,11 +1,125 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ServicesBI | CMS</title>
+<!-- ============================================================================= -->
+<!-- ARQUIVO: /index.html                                                          -->
+<!-- PROJETO: ServicesBI                                                           -->
+<!-- STATUS: ESTRUTURA PADRÃO HEADER + HERO + FOOTER                                -->
+<!-- STATUS: [2025-12-23] ORGANIZAÇÃO DA HOME EM BLOCOS SERVIÇOS E PROJETOS          -->
+<!-- ============================================================================= -->
 
-    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
-  </head>
-  <body></body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServicesBI</title>
+
+  <!-- CSS BASE -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- COMPONENTES -->
+  <link rel="stylesheet" href="css/components/cards.css">
+
+  <!-- PÁGINA -->
+  <link rel="stylesheet" href="css/pages/home.css">
+
+  <!-- ICONES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+  <div class="container header-container">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="python.html">Python</a>
+      <a href="powerbi.html">PowerBI</a>
+      <a href="automacoes.html">Automações IA</a>
+      <a href="excel.html">Excel</a>
+      <a href="curriculo.html">Currículo</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="header-avatar">
+      <img src="img/avatar.png" alt="Avatar ServicesBI">
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+  <div class="container hero-container">
+    <h1 id="page-title"></h1>
+    <p id="page-subtitle"></p>
+  </div>
+</section>
+
+<!-- ================= SERVIÇOS ================= -->
+
+<section class="services-section">
+  <div class="container services-grid">
+    <div id="services-container">
+      <!-- Serviços renderizados via CMS -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJETOS ================= -->
+
+<section class="cards-section services-projects">
+  <div class="container services-grid">
+    <div id="projetos-container">
+      <!-- Projetos renderizados via CMS -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div></div>
+
+    <div class="footer-center">
+      <h4>Navegação</h4>
+      <p class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="python.html">Python</a> |
+        <a href="powerbi.html">PowerBI</a> |
+        <a href="automacoes.html">Automações IA</a> |
+        <a href="excel.html">Excel</a> |
+        <a href="curriculo.html">Currículo</a> |
+        <a href="contato.html">Contato</a>
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <p>
+        <a href="https://www.linkedin.com/in/jrleles-analista-de-dados/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </p>
+      <p>
+        <a href="https://github.com/ServicesBI" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </p>
+      <p><i class="fa-solid fa-phone"></i> +55 61 99302-9988</p>
+      <p><i class="fa-solid fa-envelope"></i> jrleles@servicesbi.com.br</p>
+    </div>
+
+  </div>
+
+  <div class="footer-copy-bar">
+    © 2025 ServicesBI. Todos os direitos reservados.
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
 </html>
