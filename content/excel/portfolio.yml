@@ -1,0 +1,18 @@
+# =========================================================
+# STATUS:
+# [2025-12-23] Criação do portfolio.yml da área Excel.
+# Padrão único de cards de projetos (imagem + título + descrição + link).
+# =========================================================
+
+ativo: true
+
+projetos:
+  - titulo: "Dashboard em Excel"
+    descricao: "Dashboard automatizado em Excel"
+    imagem: "img/uploads/excel-01.png"
+    link: "#"
+
+  - titulo: "Controle Financeiro"
+    descricao: "Planilha de controle financeiro avançado"
+    imagem: "img/uploads/excel-02.png"
+    link: "#"

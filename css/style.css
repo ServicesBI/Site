@@ -3,22 +3,24 @@
 /* PROJETO: ServicesBI                                                           */
 /* STATUS: COR DO MENU E FOOTER ATUALIZADA PARA #102648                           */
 /* STATUS: TAMANHO DO AVATAR AJUSTADO PARA 68PX                                  */
+/* STATUS: [2025-12-23] PASSO 1 — CSS Serviços Home (servicos-container)          */
+/* STATUS: [2025-12-23] PASSO 2 — CSS Projetos Home (projetos-container)          */
 /* ============================================================================= */
 
-/* 001 */ * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 002 */ body {
+body {
     font-family: "Segoe UI", sans-serif;
     font-style: italic;
     background: #ffffff;
     color: #333;
 }
 
-/* 003 */ .container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
@@ -26,18 +28,18 @@
 
 /* ================= HEADER ================= */
 
-/* 004 */ .site-header {
+.site-header {
     background: #102648;
 }
 
-/* 005 */ .header-container {
+.header-container {
     position: relative;
     display: flex;
     align-items: center;
     height: 72px;
 }
 
-/* 006 */ .nav {
+.nav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -45,7 +47,7 @@
     gap: 64px;
 }
 
-/* 007 */ .nav a {
+.nav a {
     font-style: normal;
     color: #ffffff;
     text-decoration: none;
@@ -55,7 +57,7 @@
     position: relative;
 }
 
-/* 008 */ .nav a::before {
+.nav a::before {
     content: "";
     position: absolute;
     top: 0;
@@ -65,17 +67,17 @@
     background: transparent;
 }
 
-/* 009 */ .nav a.active::before,
+.nav a.active::before,
 .nav a:hover::before {
     background: #f2c200;
 }
 
-/* 010 */ .header-avatar {
+.header-avatar {
     position: absolute;
     right: 0;
 }
 
-/* 011 */ .header-avatar img {
+.header-avatar img {
     width: 68px;
     height: 68px;
     border-radius: 50%;
@@ -85,7 +87,7 @@
 
 /* ================= HERO ================= */
 
-/* 012 */ .hero {
+.hero {
     min-height: 420px;
     display: flex;
     align-items: flex-end;
@@ -93,68 +95,68 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    padding-bottom: 10px; /* ↓ TEXTO MAIS RENTE À BASE DO BANNER */
+    padding-bottom: 10px;
 }
 
-/* 013 */ .hero::before {
+.hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.45);
 }
 
-/* 014 */ .hero-container {
+.hero-container {
     position: relative;
     z-index: 1;
     width: 100%;
     text-align: center;
 }
 
-/* 015 */ .hero h1 {
+.hero h1 {
     display: none;
 }
 
-/* 016 */ .hero p {
-    max-width: 1200px;      /* ↑ mais largura */
+.hero p {
+    max-width: 1200px;
     margin: 0 auto;
     color: #f2c200;
     font-size: 20px;
-    white-space: nowrap;   /* 🔒 impede quebra de linha */
+    white-space: nowrap;
 }
 
 /* ================= HERO POR PÁGINA ================= */
 
-/* 017 */ .hero-home { background-image: url("../img/banner/hero-home.png"); }
-/* 018 */ .hero-python { background-image: url("../img/banner/hero-python.png"); }
-/* 019 */ .hero-powerbi { background-image: url("../img/banner/hero-powerbi.png"); }
-/* 020 */ .hero-automacoes { background-image: url("../img/banner/hero-automacoes.png"); }
-/* 021 */ .hero-excel { background-image: url("../img/banner/hero-excel.png"); }
-/* 022 */ .hero-curriculo { background-image: url("../img/banner/hero-curriculo.png"); }
-/* 023 */ .hero-contato { background-image: url("../img/banner/hero-contato.png"); }
+.hero-home { background-image: url("../img/banner/hero-home.png"); }
+.hero-python { background-image: url("../img/banner/hero-python.png"); }
+.hero-powerbi { background-image: url("../img/banner/hero-powerbi.png"); }
+.hero-automacoes { background-image: url("../img/banner/hero-automacoes.png"); }
+.hero-excel { background-image: url("../img/banner/hero-excel.png"); }
+.hero-curriculo { background-image: url("../img/banner/hero-curriculo.png"); }
+.hero-contato { background-image: url("../img/banner/hero-contato.png"); }
 
 /* ================= FIX DEFINITIVO A4 ================= */
 
 /* ❌ DESATIVADO — quebrava o tamanho A4 */
-/* 024 */ /*
+/*
 .curriculo-page .container {
     max-width: none;
     padding: 0;
 }
 */
 
-/* ================= CARDS PADRÃO (SUPERIORES) ================= */
+/* ================= CARDS PADRÃO ================= */
 
-/* 025 */ .cards-section {
+.cards-section {
     padding: 80px 0;
 }
 
-/* 026 */ .cards-grid {
+.cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
 }
 
-/* 027 */ .card {
+.card {
     background: #ffffff;
     border-radius: 14px;
     padding: 40px 28px;
@@ -165,32 +167,78 @@
     transition: all .3s ease;
 }
 
-/* 028 */ .card h3 {
+.card h3 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 12px;
     color: #1f3d2b;
 }
 
-/* 029 */ .card p {
+.card p {
     font-size: 14px;
     line-height: 1.6;
     color: #666;
 }
 
-/* ================= NOVOS CARDS DE SERVIÇOS ================= */
+/* ================= SERVIÇOS — HOME ================= */
 
-/* 030 */ .services-projects {
-    padding-top: 80px;
+#servicos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
 }
 
-/* 031 */ .projects-grid {
+.service-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(0,0,0,.10);
+    border-top: 4px solid #f2c200;
+    border-bottom: 4px solid #f2c200;
+}
+
+.service-card i {
+    font-size: 34px;
+    color: #1f3d2b;
+    margin-bottom: 16px;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #1f3d2b;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.btn-service {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 26px;
+    border: 2px solid #f2c200;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1f3d2b;
+    font-style: normal;
+}
+
+/* ================= PROJETOS — HOME ================= */
+
+#projetos-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
-/* 032 */ .project-card {
+/* ================= CARDS DE PROJETO ================= */
+
+.project-card {
     display: flex;
     flex-direction: column;
     background: #ffffff;
@@ -202,71 +250,61 @@
     border-bottom: 4px solid #f2c200;
 }
 
-/* 033 */ .project-card img {
+.project-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    display: block;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
-/* 034 */ .project-card h3 {
+.project-card h3 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 12px;
     color: #1f3d2b;
 }
 
-/* 035 */ .project-card p {
+.project-card p {
     font-size: 14px;
     line-height: 1.6;
     color: #666;
 }
 
-/* 036 */ .btn-project {
+.btn-project {
     margin-top: auto;
     align-self: center;
     padding: 10px 28px;
-    background: transparent;
-    color: #1f3d2b;
     border: 2px solid #f2c200;
-    text-decoration: none;
     border-radius: 10px;
-    font-size: 14px;
-    font-style: normal;
-    transition: all .3s ease;
-}
-
-/* 037 */ .btn-project:hover {
-    background: #f2c200;
-    color: #000;
+    text-decoration: none;
+    color: #1f3d2b;
 }
 
 /* ================= FOOTER ================= */
 
-/* 038 */ .site-footer {
+.site-footer {
     background: #102648;
     color: #ffffff;
     padding-top: 40px;
 }
 
-/* 039 */ .site-footer a { /* CORREÇÃO: mantém links do footer em branco */
+.site-footer a {
     color: #ffffff;
     text-decoration: none;
 }
 
-/* 040 */ .site-footer a i { /* CORREÇÃO: força ícones do footer em branco */
+.site-footer a i {
     color: #ffffff;
 }
 
-/* 041 */ .footer-grid {
+.footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: end;
 }
 
-/* 042 */ .footer-contact p {
+.footer-contact p {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -275,7 +313,7 @@
     margin-bottom: 6px;
 }
 
-/* 043 */ .footer-copy-bar {
+.footer-copy-bar {
     margin-top: 30px;
     background: #f2c200;
     color: #000;
@@ -286,8 +324,9 @@
 
 /* ================= RESPONSIVO ================= */
 
-/* 044 */ @media (max-width: 900px) {
-    .projects-grid {
+@media (max-width: 900px) {
+    #servicos-container,
+    #projetos-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -296,8 +335,9 @@
     }
 }
 
-/* 045 */ @media (max-width: 600px) {
-    .projects-grid,
+@media (max-width: 600px) {
+    #servicos-container,
+    #projetos-container,
     .cards-grid {
         grid-template-columns: 1fr;
     }
@@ -307,11 +347,11 @@
 /* CURRÍCULO — ESTILO ISOLADO (NÃO AFETA OUTRAS PÁGINAS)                          */
 /* ============================================================================= */
 
-/* 046 */ .curriculo-page {
+.curriculo-page {
     padding: 24px 0;
 }
 
-/* 047 */ .curriculo-download {
+.curriculo-download {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -320,12 +360,12 @@
     z-index: 2;
 }
 
-/* 048 */ .curriculo-download img {
+.curriculo-download img {
     width: 36px;
     cursor: pointer;
 }
 
-/* 049 */ .curriculo-wrapper {
+.curriculo-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
@@ -333,7 +373,7 @@
     justify-items: center;
 }
 
-/* 050 */ .curriculo-sheet {
+.curriculo-sheet {
     background: #ffffff;
     padding: 48px 64px 56px 64px;
     box-shadow: 0 10px 30px rgba(0,0,0,.12);
@@ -343,7 +383,7 @@
     margin: 0 auto;
 }
 
-/* 051 */ .curriculo-sheet::before {
+.curriculo-sheet::before {
     content: "";
     position: absolute;
     top: 0;
@@ -353,40 +393,40 @@
     background: #1f3d2b;
 }
 
-/* 052 */ .curriculo-sheet h1 {
+.curriculo-sheet h1 {
     font-size: 22px;
     margin-bottom: 12px;
 }
 
-/* 053 */ .curriculo-sheet h2 {
+.curriculo-sheet h2 {
     font-size: 16px;
     margin-top: 26px;
     margin-bottom: 10px;
 }
 
-/* 054 */ .curriculo-sheet h3 {
+.curriculo-sheet h3 {
     font-size: 14px;
     margin-top: 18px;
     margin-bottom: 6px;
 }
 
-/* 055 */ .curriculo-sheet p {
+.curriculo-sheet p {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 12px;
     text-align: justify;
 }
 
-/* 056 */ .curriculo-sheet ul {
+.curriculo-sheet ul {
     padding-left: 18px;
 }
 
-/* 057 */ .curriculo-sheet li {
+.curriculo-sheet li {
     font-size: 14px;
     margin-bottom: 8px;
 }
 
-/* 058 */ @media (max-width: 900px) {
+@media (max-width: 900px) {
     .curriculo-wrapper {
         flex-direction: column;
         align-items: center;
@@ -402,42 +442,42 @@
 /* CONTATO — ESTILO ISOLADO (NÃO AFETA OUTRAS PÁGINAS)                           */
 /* ============================================================================= */
 
-/* 059 */ .contato-page {
+.contato-page {
     padding: 80px 0;
 }
 
-/* 060 */ .contato-page h1 {
+.contato-page h1 {
     font-size: 28px;
     margin-bottom: 12px;
     color: #1f3d2b;
 }
 
-/* 061 */ .contato-page p {
+.contato-page p {
     margin-bottom: 40px;
     font-size: 15px;
 }
 
-/* 062 */ .contato-form {
+.contato-form {
     max-width: 800px;
 }
 
-/* 063 */ .contato-grid {
+.contato-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
 
-/* 064 */ .contato-grid .full {
+.contato-grid .full {
     grid-column: span 2;
 }
 
-/* 065 */ .contato-form label {
+.contato-form label {
     display: block;
     margin-bottom: 6px;
     font-size: 14px;
 }
 
-/* 066 */ .contato-form input,
+.contato-form input,
 .contato-form textarea {
     width: 100%;
     padding: 10px 12px;
@@ -446,7 +486,7 @@
     font-family: inherit;
 }
 
-/* 067 */ @media (max-width: 600px) {
+@media (max-width: 600px) {
     .contato-grid {
         grid-template-columns: 1fr;
     }

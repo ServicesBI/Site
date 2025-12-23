@@ -1,8 +1,9 @@
 <!-- ============================================================================= -->
-<!-- ARQUIVO: /automacoes.html                                                     -->
-<!-- PROJETO: ServicesBI                                                           -->
-<!-- STATUS: HERO GLOBAL VIA CMS                                                    -->
-<!-- STATUS: ESTRUTURA PADRONIZADA (HEADER + HERO + CARDS + FOOTER)                 -->
+<!-- ARQUIVO: /automacoes.html                                                   -->
+<!-- PROJETO: ServicesBI                                                         -->
+<!-- STATUS: HERO GLOBAL VIA CMS                                                  -->
+<!-- STATUS: ESTRUTURA PADRONIZADA (HEADER + HERO + CARDS + FOOTER)               -->
+<!-- STATUS: [2025-12-23] Inclusão da seção Projetos via CMS (portfolio.yml)      -->
 <!-- ============================================================================= -->
 
 <!DOCTYPE html>
@@ -16,6 +17,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+<!-- ================= HEADER ================= -->
 
 <header class="site-header">
   <div class="container header-container">
@@ -34,6 +37,8 @@
   </div>
 </header>
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
   <div class="container hero-container">
     <h1 id="page-title"></h1>
@@ -41,12 +46,27 @@
   </div>
 </section>
 
+<!-- ================= SERVIÇOS ================= -->
+
 <section class="services-section">
-  <div class="container services-grid" id="services-container"></div>
+  <div class="container services-grid" id="services-container">
+    <!-- Serviços renderizados via CMS -->
+  </div>
 </section>
+
+<!-- ================= PROJETOS ================= -->
+
+<section class="cards-section services-projects">
+  <div class="container" id="projetos-container">
+    <!-- Projetos renderizados via CMS -->
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 
 <footer class="site-footer">
   <div class="container footer-grid">
+
     <div></div>
 
     <div class="footer-center">
@@ -63,9 +83,20 @@
     </div>
 
     <div class="footer-contact">
+      <p>
+        <a href="https://www.linkedin.com/in/jrleles-analista-de-dados/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </p>
+      <p>
+        <a href="https://github.com/ServicesBI" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </p>
       <p><i class="fa-solid fa-phone"></i> +55 61 99302-9988</p>
       <p><i class="fa-solid fa-envelope"></i> jrleles@servicesbi.com.br</p>
     </div>
+
   </div>
 
   <div class="footer-copy-bar">
