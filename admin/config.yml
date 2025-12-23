@@ -8,12 +8,14 @@ public_folder: "/img/uploads"
 site_url: https://servicesbi.com.br
 
 collections:
+
   # =====================================================
   # HOME
   # =====================================================
   - label: "Home"
     name: "home"
     files:
+
       - label: "Hero"
         name: "hero"
         file: "content/home/hero.yml"
@@ -58,13 +60,12 @@ collections:
               - { label: "Imagem", name: "imagem", widget: "image" }
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Descrição", name: "descricao", widget: "text" }
-              - { label: "Link (botão Ver projeto)", name: "link", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
               - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
 
   # =====================================================
-  # PYTHON / POWERBI / AUTOMAÇÕES / EXCEL
+  # PYTHON
   # =====================================================
-
   - label: "Python"
     name: "python"
     folder: "content/python"
@@ -72,6 +73,9 @@ collections:
     fields:
       - { label: "Título", name: "titulo", widget: "string" }
 
+  # =====================================================
+  # POWERBI
+  # =====================================================
   - label: "PowerBI"
     name: "powerbi"
     folder: "content/powerbi"
@@ -79,6 +83,9 @@ collections:
     fields:
       - { label: "Título", name: "titulo", widget: "string" }
 
+  # =====================================================
+  # AUTOMAÇÕES IA
+  # =====================================================
   - label: "Automações - IA"
     name: "automacoes"
     folder: "content/automacoes"
@@ -86,6 +93,9 @@ collections:
     fields:
       - { label: "Título", name: "titulo", widget: "string" }
 
+  # =====================================================
+  # EXCEL
+  # =====================================================
   - label: "Excel"
     name: "excel"
     folder: "content/excel"
@@ -99,6 +109,7 @@ collections:
   - label: "Currículo"
     name: "curriculo"
     files:
+
       - label: "Hero"
         name: "hero"
         file: "content/curriculo/hero.yml"
@@ -122,6 +133,7 @@ collections:
   - label: "Contato"
     name: "contato"
     files:
+
       - label: "Hero"
         name: "hero"
         file: "content/contato/hero.yml"
