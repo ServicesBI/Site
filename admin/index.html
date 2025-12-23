@@ -1,20 +1,33 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ServicesBI | CMS</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ServicesBI | CMS</title>
 
-    <!-- Netlify Identity (obrigatório para git-gateway) -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <link rel="icon" href="/favicon.ico" />
-  </head>
+  <!-- Netlify Identity (OBRIGATÓRIO para git-gateway) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
 
-  <body>
-    <!-- ROOT OBRIGATÓRIO DO DECAP -->
-    <div id="nc-root"></div>
+<body>
+  <!-- ROOT OBRIGATÓRIO DO DECAP -->
+  <div id="nc-root"></div>
 
-    <!-- DECAP CMS (SEMPRE depois do root) -->
-    <script src="https://unpkg.com/decap-cms@3.8.2/dist/decap-cms.js"></script>
-  </body>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.init();
+
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+
+      window.netlifyIdentity.on("logout", () => {
+        document.location.href = "/";
+      });
+    }
+  </script>
+
+  <!-- DECAP CMS (VERSÃO ESTÁVEL) -->
+  <script src="https://unpkg.com/decap-cms@3.8.2/dist/decap-cms.js"></script>
+</body>
 </html>
