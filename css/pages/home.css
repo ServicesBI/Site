@@ -2,19 +2,13 @@
 /* ARQUIVO: /css/pages/home.css                                                  */
 /* PROJETO: ServicesBI                                                           */
 /* STATUS: HOME — ORGANIZAÇÃO DE GRID E ESPAÇAMENTO                              */
-/* STATUS: [2025-12-23] REMOÇÃO DE DEFINIÇÕES ESTRUTURAIS DE CARD                */
+/* STATUS: [2025-12-23] GRID DE SERVIÇOS REMOVIDO (AGORA GLOBAL)                 */
 /* ============================================================================= */
 
 /* ================= SEÇÃO SERVIÇOS ================= */
 
 .services-section {
     padding: 80px 0 40px;
-}
-
-#services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
 }
 
 /* ================= SEÇÃO PROJETOS ================= */
@@ -29,17 +23,15 @@
     gap: 40px;
 }
 
-/* ================= RESPONSIVO ================= */
+/* ================= RESPONSIVO — PROJETOS ================= */
 
 @media (max-width: 900px) {
-    #services-container,
     #projetos-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-    #services-container,
     #projetos-container {
         grid-template-columns: 1fr;
     }

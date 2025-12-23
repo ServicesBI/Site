@@ -3,6 +3,7 @@
 /* PROJETO: ServicesBI                                                          */
 /* STATUS: CONSOLIDAÇÃO DEFINITIVA DO COMPONENTE CARD                           */
 /* STATUS: [2025-12-23] CARD BASE + VARIAÇÕES SERVICE / PROJECT                 */
+/* STATUS: [2025-12-23] GRID GLOBAL DE SERVIÇOS (4 COLUNAS)                     */
 /* ============================================================================= */
 
 .card {
@@ -17,16 +18,24 @@
     flex-direction: column;
 }
 
+/* ================= GRID GLOBAL — SERVIÇOS ================= */
+
+#services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
 /* ================= VARIAÇÃO — SERVIÇO ================= */
 
 .card--service {
     gap: 12px;
 }
 
-.card--service img,
 .card--service i {
     font-size: 28px;
     margin-bottom: 8px;
+    color: #1f3d2b;
 }
 
 .card--service h3 {
@@ -62,6 +71,8 @@
     color: #666;
 }
 
+/* ================= BOTÃO PADRÃO ================= */
+
 .card .btn {
     margin-top: auto;
     align-self: center;
@@ -71,4 +82,18 @@
     text-decoration: none;
     color: #1f3d2b;
     font-style: normal;
+}
+
+/* ================= RESPONSIVO — SERVIÇOS ================= */
+
+@media (max-width: 900px) {
+    #services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #services-container {
+        grid-template-columns: 1fr;
+    }
 }
