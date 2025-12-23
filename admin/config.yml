@@ -1,8 +1,7 @@
+
 backend:
   name: git-gateway
   branch: main
-
-
 
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
@@ -10,7 +9,6 @@ public_folder: "/img/uploads"
 site_url: https://servicesbi.com.br
 
 collections:
-
   # =====================================================
   # HOME
   # =====================================================
