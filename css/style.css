@@ -5,6 +5,7 @@
 /* STATUS: TAMANHO DO AVATAR AJUSTADO PARA 68PX                                  */
 /* STATUS: [2025-12-23] PASSO 1 — CSS Serviços Home (servicos-container)          */
 /* STATUS: [2025-12-23] PASSO 2 — CSS Projetos Home (projetos-container)          */
+/* STATUS: [2025-12-23] AJUSTE DE TAMANHO DOS CARDS PADRÃO                        */
 /* ============================================================================= */
 
 * {
@@ -124,26 +125,6 @@ body {
     white-space: nowrap;
 }
 
-/* ================= HERO POR PÁGINA ================= */
-
-.hero-home { background-image: url("../img/banner/hero-home.png"); }
-.hero-python { background-image: url("../img/banner/hero-python.png"); }
-.hero-powerbi { background-image: url("../img/banner/hero-powerbi.png"); }
-.hero-automacoes { background-image: url("../img/banner/hero-automacoes.png"); }
-.hero-excel { background-image: url("../img/banner/hero-excel.png"); }
-.hero-curriculo { background-image: url("../img/banner/hero-curriculo.png"); }
-.hero-contato { background-image: url("../img/banner/hero-contato.png"); }
-
-/* ================= FIX DEFINITIVO A4 ================= */
-
-/* ❌ DESATIVADO — quebrava o tamanho A4 */
-/*
-.curriculo-page .container {
-    max-width: none;
-    padding: 0;
-}
-*/
-
 /* ================= CARDS PADRÃO ================= */
 
 .cards-section {
@@ -159,7 +140,7 @@ body {
 .card {
     background: #ffffff;
     border-radius: 14px;
-    padding: 40px 28px;
+    padding: 28px 22px; /* ← AJUSTE DE TAMANHO */
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
     border-top: 4px solid #f2c200;
