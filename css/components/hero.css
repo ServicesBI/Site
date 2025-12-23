@@ -1,32 +1,32 @@
-/* 01 */ /* HERO - ServicesBI */
-/* 02 */
- /* 03 */ .hero {
- /* 04 */     background-color: #f2f2f2;
- /* 05 */     min-height: 220px;
- /* 06 */     display: flex;
- /* 07 */     align-items: center;
- /* 08 */ }
- /* 09 */
- /* 10 */ .hero-container {
- /* 11 */     max-width: 1200px;
- /* 12 */     margin: 0 auto;
- /* 13 */     padding: 0 24px;
- /* 14 */     width: 100%;
- /* 15 */ }
- /* 16 */
- /* 17 */ .hero-content h1 {
- /* 18 */     font-family: "Segoe UI", sans-serif;
- /* 19 */     font-size: 36px;
- /* 20 */     font-weight: 600;
- /* 21 */     margin: 0 0 12px 0;
- /* 22 */     color: #2b2b2b;
- /* 23 */ }
- /* 24 */
- /* 25 */ .hero-content p {
- /* 26 */     font-family: "Segoe UI", sans-serif;
- /* 27 */     font-size: 16px;
- /* 28 */     max-width: 620px;
- /* 29 */     line-height: 1.6;
- /* 30 */     margin: 0;
- /* 31 */     color: #555555;
- /* 32 */ }
+/* HERO - ServicesBI */
+
+.hero {
+    background-color: #f2f2f2;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #2b2b2b;
+}
+
+.hero-content p {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    max-width: 620px;
+    line-height: 1.6;
+    margin: 0;
+    color: #555555;
+}
