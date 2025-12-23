@@ -8,7 +8,7 @@
    [2025-12-22] HERO GLOBAL via CMS (hero.yml por página).
    [2025-12-22] Serviços GLOBAIS via CMS (services/index.yml).
    [2025-12-22] Padronização para todas as páginas com services-container.
-   [2025-12-23] Portfólio genérico por página (Home especial + portfolio.yml por área).
+   [2025-12-23] HERO com imagem dinâmica via CMS (campo imagem).
 ===================================================== */
 
 /* =====================================================
@@ -50,10 +50,22 @@ async function loadHero() {
 
     if (!data || data.ativo === false) return;
 
-    if (data.titulo) titleEl.textContent = data.titulo;
-    if (data.subtitulo && subtitleEl) subtitleEl.textContent = data.subtitulo;
+    if (data.titulo) {
+      titleEl.textContent = data.titulo;
+    }
+
+    if (data.subtitulo && subtitleEl) {
+      subtitleEl.textContent = data.subtitulo;
+    }
+
+    /* =========================================
+       HERO — IMAGEM DINÂMICA VIA CMS
+    ========================================= */
     if (data.imagem) {
       heroSection.style.backgroundImage = `url('${data.imagem}')`;
+      heroSection.style.backgroundSize = "cover";
+      heroSection.style.backgroundPosition = "center";
+      heroSection.style.backgroundRepeat = "no-repeat";
     }
 
   } catch (error) {
@@ -66,11 +78,12 @@ async function loadHero() {
    Carrega: content/services/index.yml
 ===================================================== */
 async function loadServices() {
-  const container = document.getElementById("servicos-container");
+  const container = document.getElementById("services-container");
   if (!container) return;
 
   try {
     const data = await loadYAML("content/services/index.yml");
+
     if (!data || data.ativo === false || !Array.isArray(data.servicos)) return;
 
     container.innerHTML = "";
@@ -97,30 +110,16 @@ async function loadServices() {
 }
 
 /* =====================================================
-   PORTFÓLIO — GENÉRICO POR PÁGINA
-   Home → portfolio-home.yml
-   Outras → content/{pagina}/portfolio.yml
+   PORTFÓLIO — HOME
+   Carrega: content/home/portfolio-home.yml
 ===================================================== */
-async function loadPortfolio() {
+async function loadHomePortfolio() {
   const container = document.getElementById("projetos-container");
   if (!container) return;
 
-  let page = window.location.pathname
-    .split("/")
-    .pop()
-    .replace(".html", "");
-
-  if (page === "" || page === "index") {
-    page = "home";
-  }
-
-  const portfolioPath =
-    page === "home"
-      ? "content/home/portfolio-home.yml"
-      : `content/${page}/portfolio.yml`;
-
   try {
-    const data = await loadYAML(portfolioPath);
+    const data = await loadYAML("content/home/portfolio-home.yml");
+
     if (!data || data.ativo === false || !Array.isArray(data.projetos)) return;
 
     container.innerHTML = "";
@@ -140,7 +139,7 @@ async function loadPortfolio() {
     });
 
   } catch (error) {
-    console.warn(`Portfólio não carregado (${page}):`, error.message);
+    console.warn("Portfólio Home não carregado:", error.message);
   }
 }
 
@@ -150,5 +149,5 @@ async function loadPortfolio() {
 document.addEventListener("DOMContentLoaded", () => {
   loadHero();
   loadServices();
-  loadPortfolio();
+  loadHomePortfolio();
 });
