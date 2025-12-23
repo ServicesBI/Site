@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
+
+
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
 
@@ -64,32 +66,35 @@ collections:
 
   # =====================================================
   # PYTHON / POWERBI / AUTOMAÇÕES / EXCEL
-  # (mesmo modelo, só muda a pasta)
   # =====================================================
 
   - label: "Python"
     name: "python"
     folder: "content/python"
     create: false
-    files: []
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
 
   - label: "PowerBI"
     name: "powerbi"
     folder: "content/powerbi"
     create: false
-    files: []
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
 
   - label: "Automações - IA"
     name: "automacoes"
     folder: "content/automacoes"
     create: false
-    files: []
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
 
   - label: "Excel"
     name: "excel"
     folder: "content/excel"
     create: false
-    files: []
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
 
   # =====================================================
   # CURRÍCULO
