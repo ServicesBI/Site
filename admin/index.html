@@ -1,21 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>ServicesBI | CMS</title>
 
-  <!-- Netlify Identity (obrigatório) -->
+  <!-- Netlify Identity (OBRIGATÓRIO para git-gateway) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <style>
+    /* GARANTE INPUT EDITÁVEL */
+    body,
+    input,
+    textarea,
+    select {
+      pointer-events: auto !important;
+      user-select: text !important;
+    }
+
+    /* remove overlay invisível */
+    canvas {
+      display: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- 🔴 OBRIGATÓRIO: ROOT DO DECAP -->
+  <!-- 🔴 ROOT OBRIGATÓRIO DO DECAP -->
   <div id="nc-root"></div>
 
   <!-- Decap CMS (VERSÃO FIXA) -->
   <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
+
+  <!-- Login automático após autenticação -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
