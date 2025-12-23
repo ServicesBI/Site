@@ -18,3 +18,8 @@ servicos:
     descricao: "Soluções em Python, ETL e análise de dados"
     icone: "fa-solid fa-code"
     link: "python.html"
+  - ativo: true
+    titulo: "Consultoria em Dados"
+    descricao: "Diagnóstico, estratégia e apoio na tomada de decisão"
+    icone: "fa-solid fa-lightbulb"
+    link: "consultoria.html"
