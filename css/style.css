@@ -1,0 +1,474 @@
+/* ============================================================================= */
+/* ARQUIVO: /css/style.css                                                       */
+/* PROJETO: ServicesBI                                                           */
+/* STATUS: COR DO MENU E FOOTER ATUALIZADA PARA #102648                           */
+/* STATUS: TAMANHO DO AVATAR AJUSTADO PARA 68PX                                  */
+/* STATUS: [2025-12-23] PASSO 1 — CSS Serviços Home (servicos-container)          */
+/* STATUS: [2025-12-23] PASSO 2 — CSS Projetos Home (projetos-container)          */
+/* STATUS: [2025-12-23] AJUSTE DE TAMANHO DOS CARDS PADRÃO                        */
+/* ============================================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    font-style: italic;
+    background: #ffffff;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ================= HEADER ================= */
+
+.site-header {
+    background: #102648;
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 72px;
+}
+
+.nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 64px;
+}
+
+.nav a {
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    white-space: nowrap;
+    padding: 26px 4px 22px;
+    position: relative;
+}
+
+.nav a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: transparent;
+}
+
+.nav a.active::before,
+.nav a:hover::before {
+    background: #f2c200;
+}
+
+.header-avatar {
+    position: absolute;
+    right: 0;
+}
+
+.header-avatar img {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.hero h1 {
+    display: none;
+}
+
+.hero p {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #f2c200;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+/* ================= CARDS PADRÃO ================= */
+
+.cards-section {
+    padding: 80px 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px 22px; /* ← AJUSTE DE TAMANHO */
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    border-top: 4px solid #f2c200;
+    border-bottom: 4px solid #f2c200;
+    transition: all .3s ease;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1f3d2b;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* ================= SERVIÇOS — HOME ================= */
+
+#servicos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 20px;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(0,0,0,.10);
+    border-top: 4px solid #f2c200;
+    border-bottom: 4px solid #f2c200;
+}
+
+.service-card i {
+    font-size: 26px;
+    color: #1f3d2b;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #1f3d2b;
+}
+
+.service-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.btn-service {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 26px;
+    border: 2px solid #f2c200;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1f3d2b;
+    font-style: normal;
+}
+
+/* ================= PROJETOS — HOME ================= */
+
+#projetos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* ================= CARDS DE PROJETO ================= */
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(0,0,0,.10);
+    border-top: 4px solid #f2c200;
+    border-bottom: 4px solid #f2c200;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1f3d2b;
+}
+
+.project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.btn-project {
+    margin-top: auto;
+    align-self: center;
+    padding: 10px 28px;
+    border: 2px solid #f2c200;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1f3d2b;
+}
+
+/* ================= FOOTER ================= */
+
+.site-footer {
+    background: #102648;
+    color: #ffffff;
+    padding-top: 40px;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-footer a i {
+    color: #ffffff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+}
+
+.footer-contact p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.footer-copy-bar {
+    margin-top: 30px;
+    background: #f2c200;
+    color: #000;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 13px;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 900px) {
+    #servicos-container,
+    #projetos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #servicos-container,
+    #projetos-container,
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================================= */
+/* CURRÍCULO — ESTILO ISOLADO (NÃO AFETA OUTRAS PÁGINAS)                          */
+/* ============================================================================= */
+
+.curriculo-page {
+    padding: 24px 0;
+}
+
+.curriculo-download {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 16px auto 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.curriculo-download img {
+    width: 36px;
+    cursor: pointer;
+}
+
+.curriculo-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 80px;
+    justify-items: center;
+}
+
+.curriculo-sheet {
+    background: #ffffff;
+    padding: 48px 64px 56px 64px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    position: relative;
+    width: 794px;
+    min-height: 1123px;
+    margin: 0 auto;
+}
+
+.curriculo-sheet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    background: #1f3d2b;
+}
+
+.curriculo-sheet h1 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.curriculo-sheet h2 {
+    font-size: 16px;
+    margin-top: 26px;
+    margin-bottom: 10px;
+}
+
+.curriculo-sheet h3 {
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+.curriculo-sheet p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.curriculo-sheet ul {
+    padding-left: 18px;
+}
+
+.curriculo-sheet li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+    .curriculo-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curriculo-sheet {
+        width: 100%;
+        max-width: 794px;
+    }
+}
+
+/* ============================================================================= */
+/* CONTATO — ESTILO ISOLADO (NÃO AFETA OUTRAS PÁGINAS)                           */
+/* ============================================================================= */
+
+.contato-page {
+    padding: 80px 0;
+}
+
+.contato-page h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #1f3d2b;
+}
+
+.contato-page p {
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.contato-form {
+    max-width: 800px;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.contato-grid .full {
+    grid-column: span 2;
+}
+
+.contato-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+@media (max-width: 600px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,7 @@
+ativo: true
+
+projetos:
+  - titulo: Automação N8N
+    descricao: Fluxo automatizado de integração
+    imagem: img/automacao-n8n.png
+    link: "#"

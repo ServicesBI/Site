@@ -1,0 +1,67 @@
+/* FOOTER - ServicesBI */
+
+.site-footer {
+    background-color: #1f3d2b;
+    color: #ffffff;
+    padding-top: 48px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+}
+
+.footer-column img {
+    height: 40px;
+    margin-bottom: 16px;
+}
+
+.footer-column h4 {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.footer-column p,
+.footer-column a {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    color: #d0d0d0;
+    text-decoration: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-social a img {
+    height: 24px;
+    margin-right: 12px;
+}
+
+.footer-bottom {
+    margin-top: 32px;
+    padding: 16px 0;
+    background-color: #182f22;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+    color: #bfbfbf;
+}

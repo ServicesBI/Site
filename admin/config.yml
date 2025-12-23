@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - label: "Teste"
+    name: "teste"
+    files:
+      - label: "Prova"
+        name: "prova"
+        file: "content/teste/prova.yml"
+        fields:
+          - { label: "Texto", name: "texto", widget: "string" }

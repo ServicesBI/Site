@@ -1,0 +1,7 @@
+ativo: true
+
+projetos:
+  - titulo: Dashboard Financeiro
+    descricao: Análise financeira em Power BI
+    imagem: img/powerbi-dashboard.png
+    link: "#"

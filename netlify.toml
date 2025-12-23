@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [build]
   publish = "."
   command = ""
@@ -44,3 +45,9 @@
   from = "/admin"
   to = "/admin/index.html"
   status = 200
+=======
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+>>>>>>> 404aa1ea5fcd5c35fa0d296a62f0ba5be14ad535
