@@ -8,6 +8,7 @@
    [2025-12-22] HERO GLOBAL via CMS (hero.yml por página).
    [2025-12-22] Serviços GLOBAIS via CMS (services/index.yml).
    [2025-12-22] Padronização para todas as páginas com services-container.
+   [2025-12-23] Alinhamento de IDs com HTML da Home (servicos-container e projetos-container).
 ===================================================== */
 
 /* =====================================================
@@ -69,10 +70,10 @@ async function loadHero() {
 /* =====================================================
    SERVIÇOS GLOBAIS — CMS
    Carrega: content/services/index.yml
-   Renderiza onde existir #services-container
+   Renderiza onde existir #servicos-container
 ===================================================== */
 async function loadServices() {
-  const container = document.getElementById("services-container");
+  const container = document.getElementById("servicos-container");
   if (!container) return;
 
   try {
@@ -108,7 +109,7 @@ async function loadServices() {
    Carrega: content/home/portfolio-home.yml
 ===================================================== */
 async function loadHomePortfolio() {
-  const container = document.getElementById("home-portfolio-container");
+  const container = document.getElementById("projetos-container");
   if (!container) return;
 
   try {
