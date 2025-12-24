@@ -1,9 +1,9 @@
 backend:
-  name: github
-  repo: ServicesBI/servicesbi-site
+  name: git-gateway
   branch: main
-  client_id: "Ov23liONZAfVGknztzm2"
-  auth_proxy_url: https://decapcms-auth.netlify.app/auth/github
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
  
 
 media_folder: "img/uploads"

@@ -1,7 +1,0 @@
-ativo: true
-
-projetos:
-  - titulo: Projeto Exemplo Home
-    descricao: Descrição do projeto da Home
-    imagem: img/exemplo-home.png
-    link: "#"

@@ -1,7 +1,0 @@
-ativo: true
-
-projetos:
-  - titulo: SGE Python
-    descricao: Sistema de Gestão de Estoque em Python
-    imagem: img/python-sge.png
-    link: "#"
