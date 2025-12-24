@@ -1,0 +1,58 @@
+/* ================= CONTATO ================= */
+
+.contato-page {
+  padding: 80px 0;
+}
+
+.contato-page h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #1f3d2b;
+}
+
+.contato-intro {
+  margin-bottom: 40px;
+  font-size: 15px;
+  max-width: 640px;
+}
+
+.contato-form {
+  max-width: 800px;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.form-group.full {
+  grid-column: span 2;
+}
+
+.btn-project {
+  margin-top: 24px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+}

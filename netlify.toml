@@ -1,0 +1,53 @@
+<<<<<<< HEAD
+[build]
+  publish = "."
+  command = ""
+
+# Página inicial
+[[redirects]]
+  from = "/"
+  to = "/pages/index.html"
+  status = 200
+
+# Páginas principais
+[[redirects]]
+  from = "/powerbi"
+  to = "/pages/powerbi.html"
+  status = 200
+
+[[redirects]]
+  from = "/python"
+  to = "/pages/python.html"
+  status = 200
+
+[[redirects]]
+  from = "/automacoes"
+  to = "/pages/automacoes.html"
+  status = 200
+
+[[redirects]]
+  from = "/excel"
+  to = "/pages/excel.html"
+  status = 200
+
+[[redirects]]
+  from = "/curriculo"
+  to = "/pages/curriculo.html"
+  status = 200
+
+[[redirects]]
+  from = "/contato"
+  to = "/pages/contato.html"
+  status = 200
+
+# Decap CMS
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+=======
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+>>>>>>> 404aa1ea5fcd5c35fa0d296a62f0ba5be14ad535

@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/img/uploads"
+public_folder: "/public/img/uploads"
+
+site_url: "https://www.servicesbi.com.br"
+display_url: "https://www.servicesbi.com.br"
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    folder: "content/pages"
+    create: false
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - label: "Título"
+        name: "title"
+        widget: "string"
+      - label: "Descrição"
+        name: "description"
+        widget: "text"
+        required: false
+      - label: "Conteúdo"
+        name: "body"
+        widget: "markdown"
+
+  - name: "services"
+    label: "Serviços"
+    files:
+      - label: "Lista de Serviços"
+        name: "services"
+        file: "content/services.yml"
+        fields:
+          - label: "Serviços"
+            name: "items"
+            widget: "list"
+            fields:
+              - label: "Título"
+                name: "title"
+                widget: "string"
+              - label: "Descrição"
+                name: "description"
+                widget: "text"
+              - label: "Ícone"
+                name: "icon"
+                widget: "string"
+                required: false
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                required: false
+
+  - name: "portfolio"
+    label: "Portfólio"
+    files:
+      - label: "Itens do Portfólio"
+        name: "portfolio"
+        file: "content/portfolio.yml"
+        fields:
+          - label: "Projetos"
+            name: "items"
+            widget: "list"
+            fields:
+              - label: "Título"
+                name: "title"
+                widget: "string"
+              - label: "Descrição"
+                name: "description"
+                widget: "text"
+              - label: "Categoria"
+                name: "category"
+                widget: "string"
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+                required: false
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                required: false

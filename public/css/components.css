@@ -1,0 +1,119 @@
+/* ========================================================= */
+/* COMPONENTS.CSS — BASE DE COMPONENTES (CARDS)              */
+/* PROJETO: ServicesBI — NOVA ARQUITETURA CMS                */
+/* ========================================================= */
+
+
+/* ================= CARDS BASE ================= */
+
+.cards-section {
+    padding: 80px 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(0,0,0,.10);
+    border-top: 4px solid #f2c200;
+    border-bottom: 4px solid #f2c200;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card i {
+    font-size: 26px;
+    color: #1f3d2b;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1f3d2b;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.card .btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 26px;
+    border: 2px solid #f2c200;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1f3d2b;
+    font-style: normal;
+    transition: background .3s ease, color .3s ease;
+}
+
+.card .btn:hover {
+    background: #f2c200;
+    color: #000;
+}
+
+
+/* ================= SERVICES (HOME) ================= */
+
+.cards-section.services .card {
+    box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
+
+.cards-section.services .card i {
+    font-size: 28px;
+}
+
+.cards-section.services .card:hover {
+    transform: translateY(-6px);
+}
+
+
+/* ================= PROJECTS (PORTFÓLIO) ================= */
+
+.cards-section.projects .card {
+    padding: 32px;
+    box-shadow: 0 14px 36px rgba(0,0,0,.14);
+}
+
+.cards-section.projects .card:hover {
+    transform: translateY(-8px);
+}
+
+.cards-section.projects .card h3 {
+    font-size: 17px;
+}
+
+.cards-section.projects .card .btn {
+    background: #f2c200;
+    color: #000;
+}
+
+.cards-section.projects .card .btn:hover {
+    background: #e0b800;
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
