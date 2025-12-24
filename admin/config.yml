@@ -1,28 +1,17 @@
 backend:
-  name: github
-  repo: ServicesBI/Site
+  name: git-gateway
   branch: main
 
-media_folder: "img/uploads"
-public_folder: "/img/uploads"
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
-  - name: "pages"
-    label: "Páginas"
-    files:
-      - file: "content/home.md"
-        label: "Home"
-        name: "home"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Descrição", name: "description", widget: "text" }
-
-  - name: "services"
-    label: "Serviços"
-    folder: "content/services"
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição", name: "description", widget: "text" }
-
+      - { label: "Imagem", name: "image", widget: "image" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
