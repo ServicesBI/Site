@@ -2,83 +2,54 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "public/img/uploads"
-public_folder: "/public/img/uploads"
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
 
-site_url: "https://www.servicesbi.com.br"
-display_url: "https://www.servicesbi.com.br"
+site_url: https://servicesbi.com.br
+display_url: https://servicesbi.com.br
 
 collections:
-  - name: "pages"
-    label: "Páginas"
-    folder: "content/pages"
-    create: false
-    extension: "md"
-    format: "frontmatter"
-    slug: "{{slug}}"
-    fields:
-      - label: "Título"
-        name: "title"
-        widget: "string"
-      - label: "Descrição"
-        name: "description"
-        widget: "text"
-        required: false
-      - label: "Conteúdo"
-        name: "body"
-        widget: "markdown"
-
-  - name: "services"
-    label: "Serviços"
+  - name: "home"
+    label: "Home"
     files:
-      - label: "Lista de Serviços"
-        name: "services"
-        file: "content/services.yml"
+      - file: "content/cms/pages/Home/home.yml"
+        label: "Página Home"
+        name: "home"
         fields:
+          - { label: "Título do Cabeçalho", name: "cabecalho.titulo", widget: "string" }
+          - { label: "Subtítulo do Cabeçalho", name: "cabecalho.subtitulo", widget: "string" }
+
+          - label: "Banner"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Imagem", name: "imagem", widget: "image" }
+              - { label: "Texto Destaque", name: "texto_destaque", widget: "string" }
+
           - label: "Serviços"
-            name: "items"
-            widget: "list"
+            name: "servicos"
+            widget: "object"
             fields:
-              - label: "Título"
-                name: "title"
-                widget: "string"
-              - label: "Descrição"
-                name: "description"
-                widget: "text"
-              - label: "Ícone"
-                name: "icon"
-                widget: "string"
-                required: false
-              - label: "Link"
-                name: "link"
-                widget: "string"
-                required: false
+              - { label: "Título", name: "titulo", widget: "string" }
+              - label: "Cartões"
+                name: "cartoes"
+                widget: "list"
+                fields:
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Descrição", name: "descricao", widget: "text" }
+                  - { label: "Imagem", name: "imagem", widget: "image" }
+                  - { label: "Link", name: "link", widget: "string" }
 
-  - name: "portfolio"
-    label: "Portfólio"
-    files:
-      - label: "Itens do Portfólio"
-        name: "portfolio"
-        file: "content/portfolio.yml"
-        fields:
           - label: "Projetos"
-            name: "items"
-            widget: "list"
+            name: "projetos"
+            widget: "object"
             fields:
-              - label: "Título"
-                name: "title"
-                widget: "string"
-              - label: "Descrição"
-                name: "description"
-                widget: "text"
-              - label: "Categoria"
-                name: "category"
-                widget: "string"
-              - label: "Imagem"
-                name: "image"
-                widget: "image"
-                required: false
-              - label: "Link"
-                name: "link"
-                widget: "string"
-                required: false
+              - { label: "Título", name: "titulo", widget: "string" }
+              - label: "Cartões"
+                name: "cartoes"
+                widget: "list"
+                fields:
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Descrição", name: "descricao", widget: "text" }
+                  - { label: "Imagem", name: "imagem", widget: "image" }
+                  - { label: "Link", name: "link", widget: "string" }
