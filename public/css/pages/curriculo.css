@@ -1,0 +1,134 @@
+/* ============================================================================= */
+/* ARQUIVO: /public/css/pages/curriculo.css                                      */
+/* PROJETO: ServicesBI                                                           */
+/* STATUS: ESTILO DE CURRÍCULO EM DUAS FOLHAS (A4 VISUAL)                         */
+/* STATUS: ÍCONE PDF CENTRALIZADO ENTRE AS FOLHAS                                 */
+/* STATUS: LAYOUT RESPONSIVO (DESKTOP E MOBILE)                                  */
+/* STATUS: ADAPTADO AO MODELO NOVO (BASE / LAYOUT / UTILITIES)                   */
+/* ============================================================================= */
+
+/* ================= ÁREA GERAL ================= */
+
+.curriculo-page {
+  background: #9e9e9e;
+  padding: 80px 20px 120px;
+  position: relative;
+}
+
+/* ================= DOWNLOAD PDF ================= */
+
+.curriculo-download {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.curriculo-download a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background: #f4c400;
+  color: #0b2a4a;
+  border-radius: 6px;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.curriculo-download a:hover {
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+/* ================= WRAPPER ================= */
+
+.curriculo-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* ================= FOLHAS ================= */
+
+.curriculo-sheet {
+  background: #ffffff;
+  padding: 50px 45px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+/* Barra superior verde */
+.curriculo-sheet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: #1f7a4d;
+}
+
+/* ================= TIPOGRAFIA ================= */
+
+.curriculo-sheet h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #0b2a4a;
+}
+
+.curriculo-sheet h2 {
+  font-size: 16px;
+  margin-top: 26px;
+  margin-bottom: 8px;
+  color: #1f7a4d;
+  text-transform: uppercase;
+}
+
+.curriculo-sheet h3 {
+  font-size: 15px;
+  margin-top: 18px;
+  margin-bottom: 4px;
+  color: #0b2a4a;
+}
+
+.curriculo-sheet p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.curriculo-sheet ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.curriculo-sheet li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 1024px) {
+  .curriculo-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculo-download {
+    position: relative;
+    top: 0;
+    margin-bottom: 30px;
+  }
+
+  .curriculo-download a {
+    transform: none;
+  }
+}
