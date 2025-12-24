@@ -5,7 +5,7 @@ backend:
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
 
-site_url: https://servicesbi.com.br
+site_url: https://servicesbi-auth.netlify.app
 display_url: https://servicesbi.com.br
 
 collections:
