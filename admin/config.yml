@@ -1,58 +1,28 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ServicesBI/Site
   branch: main
 
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
- 
-
-media_folder: "img/uploads"
-public_folder: "/img/uploads"
-
-
 
 collections:
-  - name: "home"
-    label: "Home"
+  - name: "pages"
+    label: "Páginas"
     files:
-      - file: "content/cms/pages/Home/home.yml"
-        label: "Página Home"
+      - file: "content/home.md"
+        label: "Home"
         name: "home"
         fields:
-          - { label: "Título do Cabeçalho", name: "cabecalho.titulo", widget: "string" }
-          - { label: "Subtítulo do Cabeçalho", name: "cabecalho.subtitulo", widget: "string" }
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
 
-          - label: "Banner"
-            name: "banner"
-            widget: "object"
-            fields:
-              - { label: "Imagem", name: "imagem", widget: "image" }
-              - { label: "Texto Destaque", name: "texto_destaque", widget: "string" }
+  - name: "services"
+    label: "Serviços"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "text" }
 
-          - label: "Serviços"
-            name: "servicos"
-            widget: "object"
-            fields:
-              - { label: "Título", name: "titulo", widget: "string" }
-              - label: "Cartões"
-                name: "cartoes"
-                widget: "list"
-                fields:
-                  - { label: "Título", name: "titulo", widget: "string" }
-                  - { label: "Descrição", name: "descricao", widget: "text" }
-                  - { label: "Imagem", name: "imagem", widget: "image" }
-                  - { label: "Link", name: "link", widget: "string" }
-
-          - label: "Projetos"
-            name: "projetos"
-            widget: "object"
-            fields:
-              - { label: "Título", name: "titulo", widget: "string" }
-              - label: "Cartões"
-                name: "cartoes"
-                widget: "list"
-                fields:
-                  - { label: "Título", name: "titulo", widget: "string" }
-                  - { label: "Descrição", name: "descricao", widget: "text" }
-                  - { label: "Imagem", name: "imagem", widget: "image" }
-                  - { label: "Link", name: "link", widget: "string" }
