@@ -1,0 +1,12 @@
+- name: "python_hero"
+  label: "Python - Hero"
+  files:
+    - label: "Texto Principal"
+      name: "hero"
+      file: "content/python/hero.yml"
+      fields:
+        - { label: "Ativo", name: "ativo", widget: "boolean", default: true }
+        - { label: "Título", name: "titulo", widget: "string" }
+        - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+        - { label: "Texto de Apoio", name: "texto_apoio", widget: "text", required: false }
+        - { label: "Imagem do Banner", name: "imagem", widget: "image", required: false }

@@ -1,0 +1,44 @@
+/* ============================================================================= */
+/* ARQUIVO: /css/components/header.css                                           */
+/* PROJETO: ServicesBI                                                           */
+/* STATUS: HEADER BASE                                                           */
+/* STATUS: AVATAR NO MENU AJUSTADO SEM IMPACTO NO LAYOUT                         */
+/* ============================================================================= */
+
+/* HEADER - ServicesBI */
+
+.site-header {
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+/* ===================================================== */
+/* EXTENSÃO SEGURA — AVATAR NO MENU                     */
+/* ===================================================== */
+
+.menu-avatar-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.menu-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}

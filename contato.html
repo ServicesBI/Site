@@ -1,0 +1,134 @@
+<!-- ============================================================================= -->
+<!-- ARQUIVO: /contato.html                                                       -->
+<!-- PROJETO: ServicesBI                                                          -->
+<!-- STATUS: FORMULÁRIO DE CONTATO (NETLIFY FORMS) — SEM HERO                      -->
+<!-- STATUS: FORMULÁRIO ORGANIZADO EM GRID (ESTILO TABLE / VSCODE)                -->
+<!-- STATUS: HEADER PADRONIZADO (MENU CENTRAL + AVATAR)                           -->
+<!-- STATUS: FOOTER PADRONIZADO + COPYRIGHT EM FAIXA AMARELA                      -->
+<!-- STATUS: CORREÇÃO DA TAG <FORM> (ATRIBUTOS SENDO RENDERIZADOS COMO TEXTO)     -->
+<!-- STATUS: HERO PADRONIZADO COM BANNER (PADRÃO GLOBAL DO SITE)                  -->
+<!-- STATUS: FOOTER COM ÍCONES E NAVEGAÇÃO CLICÁVEIS                               -->
+<!-- STATUS: [2025-12-21] Remoção do Netlify Forms para compatibilidade com        -->
+<!--         GitHub Pages + Decap CMS                                             -->
+<!-- ============================================================================= -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | ServicesBI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+    <div class="container header-container">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="python.html">Python</a>
+            <a href="powerbi.html">PowerBI</a>
+            <a href="automacoes-ia.html">Automações IA</a>
+            <a href="excel.html">Excel</a>
+            <a href="curriculo.html">Currículo</a>
+            <a class="active" href="contato.html">Contato</a>
+        </nav>
+        <div class="header-avatar">
+            <a href="index.html">
+                <img src="img/avatar.png" alt="Avatar ServicesBI">
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+  <div class="container hero-container">
+    <h1 id="page-title"></h1>
+    <p id="page-subtitle"></p>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+
+<main class="contato-page">
+    <div class="container">
+        <h1>Entre em contato</h1>
+        <p>
+            Utilize o formulário abaixo para falar sobre projetos,
+            oportunidades ou parcerias profissionais.
+        </p>
+
+        <form class="contato-form" name="contato" method="POST">
+            <div class="contato-grid">
+
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group full">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn-project">
+                Enviar mensagem
+            </button>
+        </form>
+    </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div></div>
+
+        <div class="footer-center">
+            <h4>Navegação</h4>
+            <p class="footer-links">
+                <a href="index.html">Home</a> |
+                <a href="python.html">Python</a> |
+                <a href="powerbi.html">PowerBI</a> |
+                <a href="excel.html">Excel</a> |
+                <a href="curriculo.html">Currículo</a> |
+                <a href="contato.html">Contato</a>
+            </p>
+        </div>
+
+        <div class="footer-contact">
+            <p>
+                <a href="https://www.linkedin.com/in/jrleles-analista-de-dados/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </p>
+            <p>
+                <a href="https://github.com/ServicesBI" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </p>
+            <p><i class="fa-solid fa-phone"></i> +55 61 99302-9988</p>
+            <p><i class="fa-solid fa-envelope"></i> jrleles@servicesbi.com.br</p>
+        </div>
+    </div>
+
+    <div class="footer-copy-bar">
+        © 2025 ServicesBI. Todos os direitos reservados.
+    </div>
+</footer>
+
+</body>
+</html>
+

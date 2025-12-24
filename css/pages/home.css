@@ -1,0 +1,38 @@
+/* ============================================================================= */
+/* ARQUIVO: /css/pages/home.css                                                  */
+/* PROJETO: ServicesBI                                                           */
+/* STATUS: HOME — ORGANIZAÇÃO DE GRID E ESPAÇAMENTO                              */
+/* STATUS: [2025-12-23] GRID DE SERVIÇOS REMOVIDO (AGORA GLOBAL)                 */
+/* ============================================================================= */
+
+/* ================= SEÇÃO SERVIÇOS ================= */
+
+.services-section {
+    padding: 80px 0 40px;
+}
+
+/* ================= SEÇÃO PROJETOS ================= */
+
+.services-projects {
+    padding: 40px 0 80px;
+}
+
+#projetos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* ================= RESPONSIVO — PROJETOS ================= */
+
+@media (max-width: 900px) {
+    #projetos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #projetos-container {
+        grid-template-columns: 1fr;
+    }
+}
