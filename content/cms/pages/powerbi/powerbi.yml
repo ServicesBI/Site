@@ -1,0 +1,26 @@
+# =========================================
+# POWER BI - CONTEÚDO
+# =========================================
+
+cabecalho:
+  titulo: Power BI
+  subtitulo: Dashboards e análises para tomada de decisão
+
+banner:
+  imagem: img/banners/powerbi.jpg
+  texto_destaque: Visualização clara de dados e indicadores
+
+projetos:
+  titulo: Projetos em Power BI
+  cartoes:
+    - id: dashboard-financeiro
+      titulo: Dashboard Financeiro
+      descricao: Indicadores financeiros, DRE e análise de resultados
+      imagem: img/powerbi/financeiro.png
+      link: projetos/dashboard-financeiro.html
+
+    - id: dashboard-comercial
+      titulo: Dashboard Comercial
+      descricao: Vendas, metas e performance comercial
+      imagem: img/powerbi/comercial.png
+      link: projetos/dashboard-comercial.html

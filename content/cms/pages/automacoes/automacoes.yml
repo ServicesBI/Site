@@ -1,0 +1,26 @@
+# =========================================
+# AUTOMAÇÕES - CONTEÚDO
+# =========================================
+
+cabecalho:
+  titulo: Automações
+  subtitulo: Integrações, fluxos e processos automatizados
+
+banner:
+  imagem: img/banners/automacoes.jpg
+  texto_destaque: Automatizando processos para ganhar escala e eficiência
+
+projetos:
+  titulo: Projetos em Automações
+  cartoes:
+    - id: integracao-sistemas
+      titulo: Integração de Sistemas
+      descricao: Conexão entre sistemas e APIs
+      imagem: img/automacoes/integracao.png
+      link: projetos/integracao-sistemas.html
+
+    - id: fluxos-n8n
+      titulo: Fluxos N8N
+      descricao: Automação de processos com N8N
+      imagem: img/automacoes/n8n.png
+      link: projetos/fluxos-n8n.html

@@ -1,0 +1,26 @@
+# =========================================
+# EXCEL - CONTEÚDO
+# =========================================
+
+cabecalho:
+  titulo: Excel
+  subtitulo: Soluções avançadas em planilhas e análise de dados
+
+banner:
+  imagem: img/banners/excel.jpg
+  texto_destaque: Excel além do básico, aplicado ao negócio
+
+projetos:
+  titulo: Projetos em Excel
+  cartoes:
+    - id: controle-financeiro
+      titulo: Controle Financeiro
+      descricao: Planilhas automatizadas para controle financeiro e fluxo de caixa
+      imagem: img/excel/financeiro.png
+      link: projetos/controle-financeiro.html
+
+    - id: dashboards-excel
+      titulo: Dashboards em Excel
+      descricao: Painéis gerenciais com gráficos e indicadores
+      imagem: img/excel/dashboard.png
+      link: projetos/dashboards-excel.html

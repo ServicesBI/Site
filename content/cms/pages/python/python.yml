@@ -1,0 +1,26 @@
+# =========================================
+# PYTHON - CONTEÚDO
+# =========================================
+
+cabecalho:
+  titulo: Python & IA
+  subtitulo: Desenvolvimento de sistemas, automações e inteligência artificial
+
+banner:
+  imagem: img/banners/python.jpg
+  texto_destaque: Soluções robustas e escaláveis com Python
+
+projetos:
+  titulo: Projetos em Python
+  cartoes:
+    - id: sge-python
+      titulo: SGE Python
+      descricao: Sistema de Gestão de Estoque desenvolvido com Django
+      imagem: img/projetos/sge-python.png
+      link: projetos/sge-python.html
+
+    - id: api-django
+      titulo: API Django
+      descricao: Backend estruturado para integrações e sistemas
+      imagem: img/projetos/api-django.png
+      link: projetos/api-django.html

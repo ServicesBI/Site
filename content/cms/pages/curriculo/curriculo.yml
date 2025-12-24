@@ -1,0 +1,46 @@
+# =========================================
+# CURRÍCULO - CONTEÚDO
+# =========================================
+
+cabecalho:
+  titulo: Currículo
+  subtitulo: Experiência, habilidades e formação profissional
+
+banner:
+  imagem: img/banners/curriculo.jpg
+  texto_destaque: Perfil profissional focado em dados, automação e tecnologia
+
+perfil:
+  nome: Jr Leles
+  cargo: Analista de Dados | BI | Automação | Python
+  resumo: >
+    Profissional com foco em dados, automações e desenvolvimento de soluções
+    utilizando Power BI, Python, Excel e ferramentas de integração.
+
+experiencia:
+  titulo: Experiência Profissional
+  itens:
+    - cargo: Analista de Dados / BI
+      empresa: Projetos Próprios e Freelance
+      periodo: 2022 - Atual
+      descricao: >
+        Desenvolvimento de dashboards, automações de processos,
+        sistemas em Python e soluções orientadas a dados.
+
+formacao:
+  titulo: Formação
+  itens:
+    - curso: Tecnologia da Informação
+      instituicao: Em andamento
+      periodo: Atual
+
+habilidades:
+  titulo: Habilidades
+  itens:
+    - Power BI
+    - Python
+    - Excel Avançado
+    - SQL
+    - N8N
+    - Automação de Processos
+    - Análise de Dados

@@ -1,0 +1,44 @@
+# =========================================
+# CONTATO - CONTEÚDO
+# =========================================
+
+cabecalho:
+  titulo: Contato
+  subtitulo: Vamos conversar sobre seu projeto
+
+banner:
+  imagem: img/banners/contato.jpg
+  texto_destaque: Entre em contato para parcerias e oportunidades
+
+informacoes:
+  titulo: Informações de Contato
+  itens:
+    - tipo: email
+      rotulo: E-mail
+      valor: contato@servicesbi.com
+
+    - tipo: linkedin
+      rotulo: LinkedIn
+      valor: linkedin.com/in/jrleles
+
+    - tipo: github
+      rotulo: GitHub
+      valor: github.com/jrleles
+
+formulario:
+  titulo: Envie uma mensagem
+  campos:
+    - nome: nome
+      label: Nome
+      tipo: text
+
+    - nome: email
+      label: E-mail
+      tipo: email
+
+    - nome: mensagem
+      label: Mensagem
+      tipo: textarea
+
+  botao:
+    texto: Enviar mensagem
