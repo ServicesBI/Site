@@ -3,7 +3,7 @@ backend:
   repo: ServicesBI/servicesbi-site
   branch: main
   client_id: "Ov23liONZAfVGknztzm2"
-  site_domain: servicesbi.com.br
+  auth_proxy_url: https://decapcms-auth.netlify.app
  
 
 media_folder: "img/uploads"
