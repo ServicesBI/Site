@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: ServicesBI/Site
-  branch: principal
+  branch: main
 
 # ====== MÍDIA ======
 media_folder: "static/img/uploads"
