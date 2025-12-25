@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin | ServicesBI</title>
 
-    <meta http-equiv="refresh" content="0; url=https://app.tina.io/projects/00a60696-1501-4b35-aff9-4641ffc7ccd9/admin" />
+    <script
+      src="https://unpkg.com/@tinacms/app@latest/dist/tinacms-app.min.js"
+      defer
+    ></script>
   </head>
 
   <body>
-    <p>Redirecionando para o painel administrativo...</p>
+    <script>
+      window.tinaApp = {
+        clientId: "00a60696-1501-4b35-aff9-4641ffc7ccd9",
+        branch: "main"
+      };
+    </script>
+
+    <noscript>
+      É necessário habilitar JavaScript para acessar o painel administrativo.
+    </noscript>
   </body>
 </html>
