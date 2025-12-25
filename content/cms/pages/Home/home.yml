@@ -1,47 +1,38 @@
-# =========================================
-# HOME - CONTEÚDO
-# =========================================
-
 cabecalho:
-  titulo: Soluções em Dados, Automação e Inteligência
-  subtitulo: Projetos em Power BI, Python, Automações e IA aplicados ao negócio
+  titulo: ServicesBI
+  subtitulo: Soluções em Dados, Automação e Inteligência Artificial
 
 banner:
-  imagem: img/hero-mundo.jpg
-  texto_destaque: Transformando dados em decisões estratégicas
+  imagem: "/img/banner/hero-home.png"
+  texto_destaque: Transformando dados em decisões inteligentes
 
 servicos:
   titulo: Serviços
   cartoes:
-    - id: powerbi
-      titulo: Power BI
-      descricao: Dashboards interativos, KPIs e análises gerenciais
-      imagem: img/servicos/powerbi.png
-      link: powerbi.html
-
-    - id: automacoes
-      titulo: Automações
-      descricao: Processos automáticos e integrações com N8N
-      imagem: img/servicos/automacoes.png
-      link: automacoes.html
-
     - id: python
       titulo: Python & IA
-      descricao: Sistemas, APIs e inteligência artificial
-      imagem: img/servicos/python.png
-      link: python.html
+      imagem: "/img/home/card-01.png"
+      link: "/python.html"
+
+    - id: powerbi
+      titulo: Power BI
+      imagem: "/img/home/card-02.png"
+      link: "/powerbi.html"
+
+    - id: automacoes
+      titulo: Automações IA
+      imagem: "/img/home/card-03.png"
+      link: "/automacoes.html"
+
+    - id: excel
+      titulo: Excel Profissional
+      imagem: "/img/home/card-04.png"
+      link: "/excel.html"
 
 projetos:
-  titulo: Projetos
+  titulo: Projetos em Destaque
   cartoes:
     - id: sge-python
       titulo: SGE Python
-      descricao: Sistema de Gestão de Estoque em Django
-      imagem: img/projetos/sge-python.png
-      link: projetos/sge-python.html
-
-    - id: servicesbi-site
-      titulo: Site ServicesBI
-      descricao: Site institucional estático do portfólio
-      imagem: img/projetos/servicesbi.png
-      link: projetos/servicesbi.html
+      imagem: "/img/home/card-05.png"
+      link: "/projetos/sge-python.html"
