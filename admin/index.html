@@ -11,14 +11,21 @@
   <body>
     <div id="cms"></div>
 
-    <!-- Decap CMS (carregado após o DOM) -->
     <script>
-      window.addEventListener("load", function () {
-        var script = document.createElement("script");
-        script.src =
-          "https://unpkg.com/decap-cms@3.0.12/dist/decap-cms.js";
-        document.body.appendChild(script);
-      });
+      // Inicialização MANUAL do Identity (obrigatória no Legacy)
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function (user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function () {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+        window.netlifyIdentity.init();
+      }
     </script>
+
+    <!-- Decap CMS carregado DEPOIS -->
+    <script src="https://unpkg.com/decap-cms@3.0.12/dist/decap-cms.js"></script>
   </body>
 </html>
