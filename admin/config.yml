@@ -6,12 +6,54 @@ media_folder: "static/img"
 public_folder: "/img"
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "content/posts"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Imagem", name: "image", widget: "image" }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "content/cms/pages/Home/home.yml"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "content", widget: "text" }
+
+      - label: "Automações"
+        name: "automacoes"
+        file: "content/cms/pages/automacoes/automacoes.yml"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "content", widget: "text" }
+
+      - label: "Python"
+        name: "python"
+        file: "content/cms/pages/python/python.yml"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "content", widget: "text" }
+
+      - label: "Power BI"
+        name: "powerbi"
+        file: "content/cms/pages/powerbi/powerbi.yml"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "content", widget: "text" }
+
+      - label: "Excel"
+        name: "excel"
+        file: "content/cms/pages/excel/excel.yml"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "content", widget: "text" }
+
+      - label: "Currículo"
+        name: "curriculo"
+        file: "content/cms/pages/curriculo/curriculo.yml"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "content", widget: "text" }
+
+      - label: "Contato"
+        name: "contato"
+        file: "content/cms/pages/contato/contato.yml"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "content", widget: "text" }
