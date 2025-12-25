@@ -3,12 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <title>Admin | ServicesBI</title>
+
+    <!-- Tina Cloud Admin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="module"
+      src="https://unpkg.com/@tinacms/app@latest/dist/tina-admin.js"
+    ></script>
   </head>
 
   <body>
-    <div id="cms"></div>
-
-    <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+    <tina-admin
+      client-id="00a60696-1501-4b35-aff9-4641ffc7ccd9"
+      branch="main"
+    ></tina-admin>
   </body>
 </html>
+
