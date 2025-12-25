@@ -2,58 +2,205 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "static/img"
-public_folder: "/img"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "pt"
 
 collections:
-  - name: "pages"
-    label: "Páginas"
-    files:
-      - label: "Home"
-        name: "home"
-        file: "content/cms/pages/Home/home.yml"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "content", widget: "text" }
 
-      - label: "Automações"
-        name: "automacoes"
-        file: "content/cms/pages/automacoes/automacoes.yml"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "content", widget: "text" }
+  # =========================
+  # HOME
+  # =========================
+  - name: "home"
+    label: "Home"
+    file: "content/cms/home/home.yml"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Subtítulo", name: "subtitle", widget: "string" }
 
-      - label: "Python"
-        name: "python"
-        file: "content/cms/pages/python/python.yml"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "content", widget: "text" }
+      - label: "Banner"
+        name: "banner"
+        widget: "image"
 
-      - label: "Power BI"
-        name: "powerbi"
-        file: "content/cms/pages/powerbi/powerbi.yml"
+      - label: "Cartões de Serviços"
+        name: "services"
+        widget: "list"
         fields:
           - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "content", widget: "text" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Ícone", name: "icon", widget: "string" }
 
-      - label: "Excel"
-        name: "excel"
-        file: "content/cms/pages/excel/excel.yml"
+      - label: "Cartões de Projetos"
+        name: "projects"
+        widget: "list"
         fields:
           - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "content", widget: "text" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image" }
+          - { label: "Link", name: "link", widget: "string", required: false }
 
-      - label: "Currículo"
-        name: "curriculo"
-        file: "content/cms/pages/curriculo/curriculo.yml"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "content", widget: "text" }
+  # =========================
+  # PYTHON
+  # =========================
+  - name: "python"
+    label: "Python"
+    file: "content/cms/python/python.yml"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Subtítulo", name: "subtitle", widget: "string" }
 
-      - label: "Contato"
-        name: "contato"
-        file: "content/cms/pages/contato/contato.yml"
+      - label: "Banner"
+        name: "banner"
+        widget: "image"
+
+      - label: "Cartões de Serviços"
+        name: "services"
+        widget: "list"
         fields:
           - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "content", widget: "text" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Ícone", name: "icon", widget: "string" }
+
+      - label: "Cartões de Projetos"
+        name: "projects"
+        widget: "list"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image" }
+          - { label: "Link", name: "link", widget: "string", required: false }
+
+  # =========================
+  # POWER BI
+  # =========================
+  - name: "powerbi"
+    label: "Power BI"
+    file: "content/cms/powerbi/powerbi.yml"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Subtítulo", name: "subtitle", widget: "string" }
+
+      - label: "Banner"
+        name: "banner"
+        widget: "image"
+
+      - label: "Cartões de Serviços"
+        name: "services"
+        widget: "list"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Ícone", name: "icon", widget: "string" }
+
+      - label: "Cartões de Projetos"
+        name: "projects"
+        widget: "list"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image" }
+          - { label: "Link", name: "link", widget: "string", required: false }
+
+  # =========================
+  # AUTOMAÇÕES
+  # =========================
+  - name: "automacoes"
+    label: "Automações"
+    file: "content/cms/automacoes/automacoes.yml"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Subtítulo", name: "subtitle", widget: "string" }
+
+      - label: "Banner"
+        name: "banner"
+        widget: "image"
+
+      - label: "Cartões de Serviços"
+        name: "services"
+        widget: "list"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Ícone", name: "icon", widget: "string" }
+
+      - label: "Cartões de Projetos"
+        name: "projects"
+        widget: "list"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image" }
+          - { label: "Link", name: "link", widget: "string", required: false }
+
+  # =========================
+  # EXCEL
+  # =========================
+  - name: "excel"
+    label: "Excel"
+    file: "content/cms/excel/excel.yml"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Subtítulo", name: "subtitle", widget: "string" }
+
+      - label: "Banner"
+        name: "banner"
+        widget: "image"
+
+      - label: "Cartões de Serviços"
+        name: "services"
+        widget: "list"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Ícone", name: "icon", widget: "string" }
+
+      - label: "Cartões de Projetos"
+        name: "projects"
+        widget: "list"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image" }
+          - { label: "Link", name: "link", widget: "string", required: false }
+
+  # =========================
+  # CURRÍCULO
+  # =========================
+  - name: "curriculo"
+    label: "Currículo"
+    file: "content/cms/curriculo/curriculo.yml"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Subtítulo", name: "subtitle", widget: "string" }
+      - { label: "Banner", name: "banner", widget: "image" }
+
+      - label: "Folha 1"
+        name: "page_one"
+        widget: "markdown"
+
+      - label: "Folha 2"
+        name: "page_two"
+        widget: "markdown"
+
+  # =========================
+  # CONTATO (SEM FORMULÁRIO AINDA)
+  # =========================
+  - name: "contato"
+    label: "Contato"
+    file: "content/cms/contato/contato.yml"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Subtítulo", name: "subtitle", widget: "string" }
+
+      - label: "Banner"
+        name: "banner"
+        widget: "image"
+
+      - label: "Texto introdutório"
+        name: "intro"
+        widget: "text"
+
+      - label: "Observação final"
+        name: "footer_note"
+        widget: "text"
