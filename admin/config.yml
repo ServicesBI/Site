@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: github
+  repo: ServicesBI/Site
+  branch: principal
 
 # ====== MÍDIA ======
 media_folder: "static/img/uploads"
