@@ -3,36 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>Admin | ServicesBI</title>
-
-    <!-- Netlify Identity -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
 
   <body>
     <div id="cms"></div>
 
-    <script>
-      // Inicialização MANUAL do Identity (obrigatória no Legacy)
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", function (user) {
-          if (!user) {
-            window.netlifyIdentity.on("login", function () {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-        window.netlifyIdentity.init();
-      }
-    </script>
-
-    <!-- js-yaml: permite ler arquivos .yml -->
+    <!-- js-yaml -->
     <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 
     <!-- seu JS principal -->
     <script src="/js/main.js"></script>
 
-    <!-- Decap CMS carregado POR ÚLTIMO -->
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@3.0.12/dist/decap-cms.js"></script>
   </body>
 </html>
-
