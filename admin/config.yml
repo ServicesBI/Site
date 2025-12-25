@@ -3,7 +3,6 @@ backend:
   repo: ServicesBI/Site
   branch: main
   auth_type: implicit
-  app_id: Ov23li7gJbK5PMf3WZJJ
 
 # ====== MÍDIA ======
 media_folder: "static/img/uploads"
