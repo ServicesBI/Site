@@ -1,19 +1,18 @@
 console.log("main.js carregado ✅");
 
 /**
- * Detecta página:
- * - CMS: via URL
+ * Detecta a página atual
+ * - CMS: via hash
  * - Front: via data-page
  */
 function detectPage() {
-  // CMS
+  // CMS (Decap)
   const hash = window.location.hash;
   const match = hash.match(/entries\/([^/]+)/);
   if (match) return match[1];
 
   // Front
-  const body = document.body;
-  return body.dataset.page || null;
+  return document.body.dataset.page || null;
 }
 
 async function loadPageContent() {
@@ -39,28 +38,31 @@ async function loadPageContent() {
 
     injectBasicContent(data);
   } catch (error) {
-    console.error(error.message);
+    console.error("Erro ao carregar YAML:", error.message);
   }
 }
 
 /**
- * Injeção básica: título, subtítulo, banner
+ * Injeção básica: título, subtítulo e banner
  */
 function injectBasicContent(data) {
   const titleEl = document.getElementById("page-title");
   const subtitleEl = document.getElementById("page-subtitle");
   const bannerEl = document.getElementById("page-banner");
 
-  if (titleEl && data.title) {
-    titleEl.textContent = data.title;
+  // Título
+  if (titleEl && data.cabecalho?.titulo) {
+    titleEl.textContent = data.cabecalho.titulo;
   }
 
-  if (subtitleEl && data.subtitle) {
-    subtitleEl.textContent = data.subtitle;
+  // Subtítulo
+  if (subtitleEl && data.cabecalho?.subtitulo) {
+    subtitleEl.textContent = data.cabecalho.subtitulo;
   }
 
-  if (bannerEl && data.banner) {
-    bannerEl.src = data.banner;
+  // Banner
+  if (bannerEl && data.banner?.imagem) {
+    bannerEl.src = data.banner.imagem;
   }
 }
 

@@ -1,26 +1,20 @@
-# =========================================
-# EXCEL - CONTEÚDO
-# =========================================
-
 cabecalho:
   titulo: Excel
-  subtitulo: Soluções avançadas em planilhas e análise de dados
+  subtitulo: Planilhas avançadas e automações em Excel
 
 banner:
-  imagem: img/banners/excel.jpg
-  texto_destaque: Excel além do básico, aplicado ao negócio
+  imagem: "/img/banner/hero-excel.png"
+  texto_destaque: Excel profissional para decisões rápidas
 
 projetos:
   titulo: Projetos em Excel
   cartoes:
-    - id: controle-financeiro
+    - id: financeiro
       titulo: Controle Financeiro
-      descricao: Planilhas automatizadas para controle financeiro e fluxo de caixa
-      imagem: img/excel/financeiro.png
-      link: projetos/controle-financeiro.html
+      descricao: Planilhas automatizadas de controle
+      imagem: "/img/excel/card-01.png"
 
-    - id: dashboards-excel
-      titulo: Dashboards em Excel
-      descricao: Painéis gerenciais com gráficos e indicadores
-      imagem: img/excel/dashboard.png
-      link: projetos/dashboards-excel.html
+    - id: estoque
+      titulo: Gestão de Estoque
+      descricao: Controle de estoque em Excel
+      imagem: "/img/excel/card-02.png"

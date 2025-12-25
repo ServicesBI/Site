@@ -1,26 +1,20 @@
-# =========================================
-# AUTOMAÇÕES - CONTEÚDO
-# =========================================
-
 cabecalho:
-  titulo: Automações
-  subtitulo: Integrações, fluxos e processos automatizados
+  titulo: Automações IA
+  subtitulo: Automação de processos com inteligência artificial
 
 banner:
-  imagem: img/banners/automacoes.jpg
-  texto_destaque: Automatizando processos para ganhar escala e eficiência
+  imagem: "/img/banner/hero-automacoes.png"
+  texto_destaque: Eficiência, escala e inteligência nos processos
 
 projetos:
-  titulo: Projetos em Automações
+  titulo: Automações Desenvolvidas
   cartoes:
-    - id: integracao-sistemas
-      titulo: Integração de Sistemas
-      descricao: Conexão entre sistemas e APIs
-      imagem: img/automacoes/integracao.png
-      link: projetos/integracao-sistemas.html
+    - id: n8n
+      titulo: Automações com N8N
+      descricao: Integrações e fluxos automatizados
+      imagem: "/img/automacoes/card-01.png"
 
-    - id: fluxos-n8n
-      titulo: Fluxos N8N
-      descricao: Automação de processos com N8N
-      imagem: img/automacoes/n8n.png
-      link: projetos/fluxos-n8n.html
+    - id: ia
+      titulo: Bots Inteligentes
+      descricao: Bots com IA para tarefas repetitivas
+      imagem: "/img/automacoes/card-02.png"
